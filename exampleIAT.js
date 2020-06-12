@@ -41,7 +41,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat8.
 		},	
 
 		base_url : {//Where are your images at?
-			image : 'https://elinorbengayev/elinorbengayev.github.io/images/'
+			image : 'https://elinorbengayev.github.io/images/'
 		} 
 	});
 });
