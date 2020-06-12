@@ -1,7 +1,5 @@
 define(['pipAPI', 'https://baranan.github.io/minno-tasks/quiat8.js'], function(APIConstructor, iatExtension){
-//define(['pipAPI', '/implicit/user/yba/expimp/iat7.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
-	var global = API.getGlobal();
 
 	return iatExtension({
 		category1 : {
@@ -41,9 +39,7 @@ define(['pipAPI', 'https://baranan.github.io/minno-tasks/quiat8.js'], function(A
 		},	
 
 		base_url : {//Where are your images at?
-			image : 'https://elinorbengayev.github.io/images'
+			image : 'https://elinorbengayev.github.io/images/'
 		} 
 	});
 });
-
-
