@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat8.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://baranan.github.io/minno-tasks/quiat8.js'], function(APIConstructor, iatExtension){
 //define(['pipAPI', '/implicit/user/yba/expimp/iat7.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 	var global = API.getGlobal();
