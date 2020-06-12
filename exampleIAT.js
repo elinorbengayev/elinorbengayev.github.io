@@ -28,18 +28,18 @@ define(['pipAPI', 'https://baranan.github.io/minno-tasks/quiat8.js'], function(A
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-    		    {image : 'white1.jpg'}, 
-    			{image : 'white2.jpg'}, 
-    			{image : 'white3.jpg'}, 
-    			{image : 'white4.jpg'}, 
-    			{image : 'white5.jpg'}, 
-    			{image : 'white6.jpg'}			], 
+    		    {image : 'yf1.jpg'}, 
+    			{image : 'yf4.jpg'}, 
+    			{image : 'yf5.jpg'}, 
+    			{image : 'ym2.jpg'}, 
+    			{image : 'ym3.jpg'}, 
+    			{image : 'ym5.jpg'}			], 
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
 		},	
 
 		base_url : {//Where are your images at?
-			image : 'https://elinorbengayev.github.io/images/'
+			image : 'https://baranan.github.io/minno-tasks/images/'
 		} 
 	});
 });
