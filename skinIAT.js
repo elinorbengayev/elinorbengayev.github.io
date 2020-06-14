@@ -6,7 +6,8 @@ define(['pipAPI',  'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qual
     var darkImages = [];
     var lightImagesLabel = [];
     var darkImagesLabel = [];
-
+	
+	var baseURL = 'https://baranan.github.io/minno-tasks/docs/images';
 	  //Fill the sets of words and images for the gay categories, based on the gay-set condition
       if (set == 'A')
 	{
@@ -45,7 +46,6 @@ define(['pipAPI',  'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qual
 	    darkImagesLabel ='label2b.jpg';
 
 	}
-	var baseURL = 'https://elinorbengayev.github.io/skinImages/';
     var posWords = API.shuffle([
 	      'Love', 'Cheer', 'Friend', 'Pleasure', 
 	      'Adore', 'Cheerful', 'Friendship', 'Joyful', 
