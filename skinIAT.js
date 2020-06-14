@@ -1,12 +1,12 @@
-define(['pipAPI', 'https://baranan.github.io/minno-tasks/quiat8.js'], function(APIConstructor, iatExtension){
+define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js'], function(APIConstructor, iatExtension){
 	
 	var API = new APIConstructor();
 	var set = API.shuffle(['A','B'])[0];
-    var lightImages = [];
-    var darkImages = [];
-    var lightImagesLabel = [];
-    var darkImagesLabel = [];
-
+	var lightImages = [];
+	var darkImages = [];
+	var lightImagesLabel = [];
+	var darkImagesLabel = [];
+	var baseURL = 'https://baranan.github.io/minno-tasks/docs/images';
 	  //Fill the sets of words and images for the gay categories, based on the gay-set condition
       if (set == 'A')
 	{
@@ -45,7 +45,6 @@ define(['pipAPI', 'https://baranan.github.io/minno-tasks/quiat8.js'], function(A
 	    darkImagesLabel ='label2b.jpg';
 
 	}
-	var baseURL = 'https://elinorbengayev.github.io/skinImages/';
     var posWords = API.shuffle([
 	      'Love', 'Cheer', 'Friend', 'Pleasure', 
 	      'Adore', 'Cheerful', 'Friendship', 'Joyful', 
