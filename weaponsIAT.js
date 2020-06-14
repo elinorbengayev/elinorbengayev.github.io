@@ -1,5 +1,5 @@
-define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js'], function(APIConstructor, iatExtension){
-	var baseURL = 'https://elinorbengayev.github.io/weaponImages';
+define(['pipAPI','https://baranan.github.io/minno-tasks/quiat8.js'], function(APIConstructor, iatExtension){
+	var baseURL = 'https://elinorbengayev.github.io/weaponImages/';
 	return iatExtension({
         category2 : {
             name : 'Black Americans', //Will appear in the data.
