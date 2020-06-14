@@ -1,7 +1,6 @@
 define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js'], function(APIConstructor, iatExtension){
-
 	var baseURL = 'https://baranan.github.io/minno-tasks/docs/images';
-    return iatExtension({
+	return iatExtension({
         category2 : {
             name : 'Black Americans', //Will appear in the data.
             title : {
@@ -13,9 +12,9 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
                 {image: 'bf14.jpg'},
                 {image: 'bf23.jpg'},
                 {image: 'bf56.jpg'},
-				        {image: 'bm14.jpg'},
+		{image: 'bm14.jpg'},
                 {image: 'bm23.jpg'},                 
-				        {image: 'bm56.jpg'}   
+		{image: 'bm56.jpg'}   
     	    ],
     		//Stimulus css (style)
     		stimulusCss : {color:'#31940F','font-size':'2.3em'}
@@ -31,7 +30,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
                 {image: 'wf2.jpg'},
                 {image: 'wf3.jpg'},
                 {image: 'wf6.jpg'},
-				        {image: 'wm1.jpg'},
+		{image: 'wm1.jpg'},
                 {image: 'wm4.jpg'},
                 {image: 'wm6.jpg'}
             ],
@@ -50,7 +49,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
 				{image: 'wgrenade.jpg'},
         {image: 'waxe.jpg'},
         {image: 'wcannon.jpg'},
-				{image: 'wmace.jpg'},
+	{image: 'wmace.jpg'},
         {image: 'wrevolver.jpg'},
         {image: 'wrifle.jpg'},
         {image: 'wsword.jpg'}
@@ -69,12 +68,12 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
 				{image: 'hbottle.jpg'},
-        {image: 'hcamera.jpg'},
-        {image: 'hcoke.jpg'},
+				{image: 'hcamera.jpg'},
+				{image: 'hcoke.jpg'},
 				{image: 'hice_cream.jpg'},
-        {image: 'hphone.jpg'},
-        {image: 'hwalkman.jpg'},
-        {image: 'hwallet.jpg'}
+				{image: 'hphone.jpg'},
+				{image: 'hwalkman.jpg'},
+				{image: 'hwallet.jpg'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
