@@ -54,7 +54,7 @@ define(['pipAPI','https://baranan.github.io/minno-tasks/quiat8.js'], function(AP
         {image: 'wrevolver.jpg'},
         {image: 'wrifle.jpg'},
         {image: 'wsword.jpg'}
-
+              
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -82,10 +82,12 @@ define(['pipAPI','https://baranan.github.io/minno-tasks/quiat8.js'], function(AP
         base_url : {//Where are your images at?
             image : baseURL
         },
-
+				
 			fb_strong_Att1WithCatA_Att2WithCatB : 'Your data suggest a strong automatic association for attribute1 with categoryA and attribute2 with categoryB.',
 			fb_moderate_Att1WithCatA_Att2WithCatB : 'Your data suggest a moderate automatic association for attribute1 with categoryA and attribute2 with categoryB.',
 			fb_slight_Att1WithCatA_Att2WithCatB : 'Your data suggest a slight automatic association for attribute1 with categoryA and attribute2 with categoryB.',
 			fb_equal_CatAvsCatB : 'Your data suggest little or no automatic association between attribute2 and attribute1 with categoryA and categoryB.'
     });
 });
+
+
