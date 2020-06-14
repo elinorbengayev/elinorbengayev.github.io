@@ -1,4 +1,4 @@
-define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js'], function(APIConstructor, iatExtension){
+define(['pipAPI','https://baranan.github.io/minno-tasks/quiat8.js'], function(APIConstructor, iatExtension){
 	
 	var API = new APIConstructor();
 	var set = API.shuffle(['A','B'])[0];
@@ -6,7 +6,7 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
 	var darkImages = [];
 	var lightImagesLabel = [];
 	var darkImagesLabel = [];
-	var baseURL = 'https://baranan.github.io/minno-tasks/docs/images';
+	var baseURL = 'https://elinorbengayev.github.io/skinImages/';
 	  //Fill the sets of words and images for the gay categories, based on the gay-set condition
       if (set == 'A')
 	{
