@@ -6,7 +6,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/sti
 		  category : { 
 		    name : 'Dogs', //Will appear in the data.
 		    title : {
-		      media : {word : 'Black people'}, //Name of the category presented in the task.
+		      media : {word : 'Dogs'}, //Name of the category presented in the task.
 		      css : {color:'#31940F','font-size':'2em'}, //Style of the category title.
 		      height : 4 //Used to position the "Or" in the combined block.
 		    }, 
