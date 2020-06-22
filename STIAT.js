@@ -850,6 +850,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				var DScoreObj = scorer.computeD();
 				//Save for the task's session.
 				piCurrent.feedback = DScoreObj.FBMsg;
+				piCurrent.d = DScoreObj.DScore;
 				//Save to server
 				//API.save({block2Condition:block2Condition, feedback:DScoreObj.FBMsg, d: DScoreObj.DScore});
 				window.minnoJS.onEnd();
