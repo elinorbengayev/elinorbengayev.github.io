@@ -267,7 +267,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                         log.data.block, //'block'
                         log.trial_id, //'trial'
                         log.data.condition, //'cond'
-                        //log.data.cong, //'comp'
+                        //log.data, //'comp'
                         log.name, //'type'
                         log.stimuli[0], //'cat'
                         log.media[0], //'stim'
@@ -284,7 +284,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                             9, //'block'
                             999, //'trial'
                             'end', //'cond'
-                            '', //'comp'
+                            //'', //'comp'
                             '', //'type'
                             '', //'cat'
                             '', //'stim'
@@ -295,7 +295,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                             piCurrent.feedback, //'fb'
                             block2Cond //'bOrd'
                         ]);
-                //console.log('added');
+                console.log(content);
                         
                 content.unshift(headers);
                 return toCsv(content);
