@@ -240,7 +240,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             // Transform logs into a string
             // we save as CSV because qualtrics limits to 20K characters and this is more efficient.
             serialize: function (name, logs) {
-                var headers = ['block', 'trial', 'cond', 'comp', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
+                var headers = ['block', 'trial', 'cond', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
                 console.log(logs);
                 var myLogs = [];
                 var iLog;
@@ -251,7 +251,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                         console.log(logs[iLog]);
                         console.log('---MISSING PROPERTIY---');
                     }
-                    else if(!hasProperties(logs[iLog].data, ['block', 'condition', 'score', 'cong']))
+                    else if(!hasProperties(logs[iLog].data, ['block', 'condition', 'score']))
                     {
                         console.log('---MISSING data PROPERTIY---');
                         console.log(logs[iLog].data);
@@ -267,7 +267,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                         log.data.block, //'block'
                         log.trial_id, //'trial'
                         log.data.condition, //'cond'
-                        log.data.cong, //'comp'
+                        //log.data.cong, //'comp'
                         log.name, //'type'
                         log.stimuli[0], //'cat'
                         log.media[0], //'stim'
