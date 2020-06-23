@@ -293,7 +293,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                             '', //'rt'
                             piCurrent.d, //'d'
                             piCurrent.feedback, //'fb'
-                            block2Cond //'bOrd'
+                            block2Condition //'bOrd'
                         ]);
                 console.log(content);
                         
