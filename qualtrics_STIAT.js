@@ -61,6 +61,6 @@ define(['pipAPI', 'https://elinorbengayev.github.io/STIAT.js'], function(APICons
 
   base_url : {//Where are your images at?
     image : 'https://baranan.github.io/minno-tasks/images/'
-  } 
+  }}
   );
   });
