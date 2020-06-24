@@ -59,7 +59,7 @@ define(['pipAPI', 'https://elinorbengayev.github.io/STIAT.js'], function(APICons
 			css : {color:'#31b404','font-size':'3em'}
 			},
 
-  //base_url : {//Where are your images at?
+  base_url : {//Where are your images at?
     image : 'https://elinorbengayev.github.io/imgs/'
   } 
   );
