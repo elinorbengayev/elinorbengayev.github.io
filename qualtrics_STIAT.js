@@ -1,5 +1,5 @@
 define(['pipAPI', 'https://elinorbengayev.github.io/STIAT.js'], function(APIConstructor, stiatExtension){
-	//var API = new APIConstructor();
+	var API = new APIConstructor();
 		  return stiatExtension({
 		  category : { 
 		    name : 'Black people', //Will appear in the data.
