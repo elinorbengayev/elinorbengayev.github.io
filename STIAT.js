@@ -241,21 +241,21 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             // we save as CSV because qualtrics limits to 20K characters and this is more efficient.
             serialize: function (name, logs) {
                 var headers = ['block', 'trial', 'cond', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
-                console.log(logs);
+                //console.log(logs);
                 var myLogs = [];
                 var iLog;
                 for (iLog = 0; iLog < logs.length; iLog++)
                 {
                     if(!hasProperties(logs[iLog], ['trial_id', 'name', 'responseHandle', 'stimuli', 'media', 'latency'])){
-                        console.log('---MISSING PROPERTIY---');
-                        console.log(logs[iLog]);
-                        console.log('---MISSING PROPERTIY---');
+                        //console.log('---MISSING PROPERTIY---');
+                        //console.log(logs[iLog]);
+                        //console.log('---MISSING PROPERTIY---');
                     }
                     else if(!hasProperties(logs[iLog].data, ['block', 'condition', 'score']))
                     {
-                        console.log('---MISSING data PROPERTIY---');
-                        console.log(logs[iLog].data);
-                        console.log('---MISSING data PROPERTIY---');
+                        //console.log('---MISSING data PROPERTIY---');
+                        //console.log(logs[iLog].data);
+                        //console.log('---MISSING data PROPERTIY---');
                     }
                     else
                     {
@@ -295,7 +295,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                             piCurrent.feedback, //'fb'
                             block2Condition //'bOrd'
                         ]);
-                console.log(content);
+                //console.log(content);
                         
                 content.unshift(headers);
                 return toCsv(content);
