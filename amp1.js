@@ -10,14 +10,14 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/amp4.
 				nameForLogging : 'positive', //Will be used in the logging
 				//An array of all media objects for this category.
 				mediaArray : [
-                    //{image: 'pos1.jpg'},
-                    //{image: 'pos2.jpg'},
-                    //{image: 'pos3.jpg'},
-                    //{image: 'pos4.jpg'},
-                    //{image: 'pos5.jpg'},
-                    //{image: 'pos6.jpg'},
-                    //{image: 'pos7.jpg'},
-                    //{image: 'pos8.jpg'},
+                    {image: 'pos1.jpg'},
+                    {image: 'pos2.jpg'},
+                    {image: 'pos3.jpg'},
+                    {image: 'pos4.jpg'},
+                    {image: 'pos5.jpg'},
+                    {image: 'pos6.jpg'},
+                    {image: 'pos7.jpg'},
+                    {image: 'pos8.jpg'},
                     {word: 'Paradise'},
                     {word: 'Pleasure'},
                     {word: 'Cheer'},
@@ -33,14 +33,14 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/amp4.
 				nameForLogging : 'negative', //Will be used in the logging
 				//An array of all media objects for this category.
 				mediaArray : [
-                    //{image: 'neg1.jpg'},
-                    //{image: 'neg2.jpg'},
-                    //{image: 'neg3.jpg'},
-                    //{image: 'neg4.jpg'},
-                    //{image: 'neg5.jpg'},
-                    //{image: 'neg6.jpg'},
-                    //{image: 'neg7.jpg'},
-                    //{image: 'neg8.jpg'},
+                    {image: 'neg1.jpg'},
+                    {image: 'neg2.jpg'},
+                    {image: 'neg3.jpg'},
+                    {image: 'neg4.jpg'},
+                    {image: 'neg5.jpg'},
+                    {image: 'neg6.jpg'},
+                    {image: 'neg7.jpg'},
+                    {image: 'neg8.jpg'},
                     {word: 'Bomb'},
                     {word: 'Abuse'},
                     {word: 'Sadness'},
@@ -56,8 +56,8 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/amp4.
 		{
 			nameForLogging : 'examplePrime', //Will be used in the logging
 			//An array of all media objects for this category.
-			mediaArray : [{word : 'Table'}, {word : 'Chair'}]
-			//mediaArray : [{image : 'ampchair.jpg'}, {image : 'amplamp.jpg'}, {image : 'ampumbrella.jpg'}]
+			//mediaArray : [{word : 'Table'}, {word : 'Chair'}]
+			mediaArray : [{image : 'ampchair.jpg'}, {image : 'amplamp.jpg'}, {image : 'ampumbrella.jpg'}]
 		},
 
 		base_url : {//Where are your images at?
