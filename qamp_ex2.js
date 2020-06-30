@@ -54,7 +54,7 @@ define(['pipAPI', 'https://elinorbengayev.github.io/qamp.js'], function(APIConst
 		},
 
 		base_url : {//Where are your images at?
-			image : https://elinorbengayev.github.io/images/
+			image : 'https://elinorbengayev.github.io/images/'
 		}
 	});
 });
