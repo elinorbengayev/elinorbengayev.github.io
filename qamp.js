@@ -58,6 +58,17 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 					nameForLogging : 'chinese',  //Will be used in the logging
 					//An array of all media objects for this category. The default is pic1-pic200.jpg
 					mediaArray : [
+					    {image: 'pos1.jpg'},
+					    {image: 'pos2.jpg'},
+					    {image: 'pos3.jpg'},
+					    {image: 'pos4.jpg'},
+					    {image: 'pos5.jpg'},
+					    {image: 'pos6.jpg'},
+					    {image: 'pos7.jpg'},
+					    {image: 'pos8.jpg'},
+						]
+					/*
+					mediaArray : [
 						{image : 'pic1.jpg'}, {image : 'pic2.jpg'}, {image : 'pic3.jpg'}, {image : 'pic4.jpg'}, {image : 'pic5.jpg'}, {image : 'pic6.jpg'}, {image : 'pic7.jpg'}, {image : 'pic8.jpg'}, {image : 'pic9.jpg'}, 
 						{image : 'pic10.jpg'}, {image : 'pic11.jpg'}, {image : 'pic12.jpg'}, {image : 'pic13.jpg'}, {image : 'pic14.jpg'}, {image : 'pic15.jpg'}, {image : 'pic16.jpg'}, {image : 'pic17.jpg'}, {image : 'pic18.jpg'}, {image : 'pic19.jpg'}, 
 						{image : 'pic20.jpg'}, {image : 'pic21.jpg'}, {image : 'pic22.jpg'}, {image : 'pic23.jpg'}, {image : 'pic24.jpg'}, {image : 'pic25.jpg'}, {image : 'pic26.jpg'}, {image : 'pic27.jpg'}, {image : 'pic28.jpg'}, {image : 'pic29.jpg'}, 
@@ -79,6 +90,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 						{image : 'pic190.jpg'}, {image : 'pic191.jpg'}, {image : 'pic192.jpg'}, {image : 'pic193.jpg'}, {image : 'pic194.jpg'}, {image : 'pic195.jpg'}, {image : 'pic196.jpg'}, {image : 'pic197.jpg'}, {image : 'pic198.jpg'}, {image : 'pic199.jpg'}, 
 						{image : 'pic200.jpg'}
 					]
+					*/
 				}
 			],
 			exampleTargetStimulus : 
@@ -120,7 +132,8 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			leftKey : 'e', 
 			
 			base_url : {//Where are your images at?
-				image : '/implicit/common/all/js/pip/piscripts/amp/images/'
+				image : 'https://elinorbengayev.github.io/images/'
+				//image : '/implicit/common/all/js/pip/piscripts/amp/images/'
 			}, 
 
 			trialsInBlock : [40, 40, 40], //Number of trials in each block 
