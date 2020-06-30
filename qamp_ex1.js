@@ -1,5 +1,5 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/amp4.js'], function(APIConstructor, ampExtension){
-
+define(['pipAPI', 'https://elinorbengayev.github.io/qamp.js'], function(APIConstructor, ampExtension){
+//https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/amp4.js
 	var API = new APIConstructor();
 	var global = API.getGlobal();
 	
