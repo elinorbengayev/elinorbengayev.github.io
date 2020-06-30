@@ -93,6 +93,8 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 					*/
 				}
 			],
+			
+			console.log("got here 1");
 			exampleTargetStimulus : 
 			{
 				nameForLogging : 'exampleTarget', //Will be used in the logging
@@ -254,6 +256,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			fb_att2WithCatA_att1withCatB : 'Your data suggest an automatic preference of CATEGORYA over CATEGORYB.',
 			fb_equal_CatAvsCatB : 'Your data suggest no preference between CATEGORYA and CATEGORYB.'
 		};
+		console.log("got here 2");
 
 		// extend the current object with the default
 		_.defaults(piCurrent, options, ampObj);
@@ -376,7 +379,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 						{type:'endTrial'}
 					]
 				},
-
+			
 				{//What to do upon response
 				//the  proposition: dont remove the mask upon timeout, wait until reaction
 					conditions: [{type:'inputEquals',value:piCurrent.sortingLabel2}], //responded with category1 (e.g., pleasant)
@@ -405,7 +408,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 				}
 			]
 		});
-
+	console.log("got here 3");
         //For the 1-7 rating version
 		API.addTrialSets('basicRate', 
 		{
@@ -656,6 +659,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			]
 		});
 
+	console.log("got here 4");
 
 
 		/*
@@ -817,6 +821,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 				}
 			]
 		});
+	console.log("got here 5");
 
         /**
          * Add rating stimuli
@@ -873,6 +878,8 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
     			data : {handle:'rate7'}}
     		]
     	});		
+		console.log("got here 6");
+
 		/**
 		Add a stimulus for each prime category
 		**/
@@ -1025,6 +1032,8 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			);
 			blockNum++;
 		}
+			console.log("got here 7");
+
 		//Final trial
 		trialSequence.push(
 		{ //End the task
@@ -1204,6 +1213,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 
 			return ({feedback:feedback});
 		}
+		console.log("got here 8");
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//What to do at the end of the task.
