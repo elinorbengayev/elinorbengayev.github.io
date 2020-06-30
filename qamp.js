@@ -94,7 +94,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 				}
 			],
 			
-			console.log("got here 1");
+			
 			exampleTargetStimulus : 
 			{
 				nameForLogging : 'exampleTarget', //Will be used in the logging
