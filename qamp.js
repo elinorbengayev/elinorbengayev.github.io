@@ -300,12 +300,12 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                     }
                     else
                     {
-			console.log(iLog);
-			console.log(logs[iLog]);
+			//console.log(iLog);
+			//console.log(logs[iLog]);
                         myLogs.push(logs[iLog]);
                     }
                 }
-		console.log(myLogs);
+		//console.log(myLogs);
                 var content = myLogs.map(function (log) { 
                     return [
                         log.data.block, //'block'
@@ -322,7 +322,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                         '', //'fb'
                         //'' //'bOrd'
                         ]; });
-                console.log('mapped');
+                console.log('mapped'+content);
                 //Add a line with the feedback, score and block-order condition
                 content.push([
                             9, //'block'
@@ -353,6 +353,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                             console.log('missing ' + props[iProp]);
                             return false;
                         }
+			console.log(props[iProp]);
                     }
                     return true;
                 }
@@ -366,10 +367,10 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                 }
             },
             // Set logs into an input (i.e. put them wherever you want)
-            send: function(name, serialized){
-		console.log(serialized);
+            send: function(name, serialize){
+		console.log(serialize);
 		console.log(name);
-                window.minnoJS.logger(serialized);
+                window.minnoJS.logger(serialize);
             }
         });
 
