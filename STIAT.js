@@ -309,6 +309,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                             //console.log('missing ' + props[iProp]);
                             return false;
                         }
+			if (iProp==0)
+				console.log(props[iProp]);
+			
                     }
                     return true;
                 }
