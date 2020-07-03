@@ -281,7 +281,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
             // we save as CSV because qualtrics limits to 20K characters and this is more efficient.
             serialize: function (name, logs) {
                 var headers = ['block', 'trial', 'cond', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
-                //console.log(logs);
+                console.log(logs);
                 var myLogs = [];
                 var iLog;
                 for (iLog = 0; iLog < logs.length; iLog++)
@@ -1330,11 +1330,11 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			endTask: function(){
 				var logs = API.getLogs();//saving the logs
 				console.log(logs);
-				//console.log("into computing");
+				console.log("into computing");
 				var feedbackObj = piCurrent.responses==2 ? computeAMPScore2(logs) : computeAMPScore7(logs);
 				//Save for the task's session.
-				//console.log("after computing, feedbackObj");
-				//console.log(feedbackObj);
+				console.log("after computing, feedbackObj");
+				console.log(feedbackObj);
 				API.addCurrent(feedbackObj);
 				window.minnoJS.onEnd();
 			}
