@@ -264,8 +264,8 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
         API.addSettings('onEnd', window.minnoJS.onEnd);
 
 		//For debugging the logger
-		//window.minnoJS.logger = console.log;
-		//window.minnoJS.onEnd = console.log;
+		window.minnoJS.logger = console.log;
+		window.minnoJS.onEnd = console.log;
 		
         API.addSettings('logger', {
             // gather logs in array
@@ -287,15 +287,15 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                 for (iLog = 0; iLog < logs.length; iLog++)
                 {
                     if(!hasProperties(logs[iLog], ['trial_id', 'name', 'responseHandle', 'stimuli', 'media', 'latency'])){
-                        //console.log('---MISSING PROPERTIY---');
-                        //console.log(logs[iLog]);
-                        //console.log('---MISSING PROPERTIY---');
+                        console.log('---MISSING PROPERTIY---');
+                        console.log(logs[iLog]);
+                        console.log('---MISSING PROPERTIY---');
                     }
                     else if(!hasProperties(logs[iLog].data, ['block', 'condition', 'score']))
                     {
-                        //console.log('---MISSING data PROPERTIY---');
-                        //console.log(logs[iLog].data);
-                        //console.log('---MISSING data PROPERTIY---');
+                        console.log('---MISSING data PROPERTIY---');
+                        console.log(logs[iLog].data);
+                        console.log('---MISSING data PROPERTIY---');
                     }
                     else
                     {
@@ -318,7 +318,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                         //'', //'fb'
                         //'' //'bOrd'
                         ]; });
-                //console.log('mapped');
+                console.log('mapped');
                 //Add a line with the feedback, score and block-order condition
                 content.push([
                             9, //'block'
@@ -335,7 +335,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                             //piCurrent.feedback, //'fb'
                             //block2Condition //'bOrd'
                         ]);
-                //console.log(content);
+                console.log(content);
                         
                 content.unshift(headers);
                 return toCsv(content);
@@ -346,7 +346,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                     {
                         if (!obj.hasOwnProperty(props[iProp]))
                         {
-                            //console.log('missing ' + props[iProp]);
+                            console.log('missing ' + props[iProp]);
                             return false;
                         }
                     }
