@@ -280,7 +280,8 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
             // Transform logs into a string
             // we save as CSV because qualtrics limits to 20K characters and this is more efficient.
             serialize: function (name, logs) {
-                var headers = ['block', 'trial', 'cond', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
+                //var headers = ['block', 'trial', 'cond', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
+		var headers = ['block','trial','cond', 'type', 'cat',  'stim', 'resp', 'err', 'rt','fb'];
                 console.log(logs);
                 var myLogs = [];
                 var iLog;
@@ -302,10 +303,11 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                         myLogs.push(logs[iLog]);
                     }
                 }
+		console.log(myLogs);
                 var content = myLogs.map(function (log) { 
                     return [
                         log.data.block, //'block'
-                        //log.trial_id, //'trial'
+                        log.trial_id, //'trial'
                         log.data.condition, //'cond'
                         //log.data, //'comp'
                         log.nameForLogging, //'type'
@@ -315,14 +317,14 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                         log.data.score, //'err'
                         log.latency, //'rt'
                         //'', //'d'
-                        //'', //'fb'
+                        '', //'fb'
                         //'' //'bOrd'
                         ]; });
                 console.log('mapped');
                 //Add a line with the feedback, score and block-order condition
                 content.push([
                             9, //'block'
-                            //999, //'trial'
+                            999, //'trial'
                             'end', //'cond'
                             //'', //'comp'
                             '', //'type'
@@ -332,7 +334,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                             '', //'err'
                             '', //'rt'
                             //piCurrent.d, //'d'
-                            //piCurrent.feedback, //'fb'
+                            piCurrent.feedback, //'fb'
                             //block2Condition //'bOrd'
                         ]);
                 console.log(content);
@@ -1331,13 +1333,14 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 		API.addSettings('hooks',{
 			endTask: function(){
 				var logs = API.getLogs();//saving the logs
-				console.log(logs);
+				//console.log(logs);
 				console.log("into computing");
 				var feedbackObj = piCurrent.responses==2 ? computeAMPScore2(logs) : computeAMPScore7(logs);
 				//Save for the task's session.
 				console.log("after computing, feedbackObj");
 				console.log(feedbackObj);
 				API.addCurrent(feedbackObj);
+				picurrent.feedback=feedbackObj;
 				window.minnoJS.onEnd();
 			}
 		});
