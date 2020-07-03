@@ -65,7 +65,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 					    {image: 'pos5.jpg'},
 					    {image: 'pos6.jpg'},
 					    {image: 'pos7.jpg'},
-					    {image: 'pos8.jpg'},
+					    {image: 'pos8.jpg'}
 						]
 					/*
 					mediaArray : [
@@ -306,7 +306,8 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                     }
                 }
 		//console.log(myLogs);
-                var content = myLogs.map(function (log) { 
+		var content=" ";
+                content = myLogs.map(function (log) { 
                     return [
                         log.data.block, //'block'
                         log.trial_id, //'trial'
@@ -319,10 +320,10 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                         log.data.score, //'err'
                         log.latency, //'rt'
                         //'', //'d'
-                        '', //'fb'
+                        '' //'fb'
                         //'' //'bOrd'
                         ]; });
-                console.log('mapped'+content);
+                console.log("mapped"+content);
                 //Add a line with the feedback, score and block-order condition
                 content.push([
                             9, //'block'
@@ -336,12 +337,14 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                             '', //'err'
                             '', //'rt'
                             //piCurrent.d, //'d'
-                            piCurrent.feedback, //'fb'
+                            piCurrent.feedback //'fb'
                             //block2Condition //'bOrd'
                         ]);
                 console.log(content);
                         
                 content.unshift(headers);
+		console.log("after headers");
+		console.log(content);
                 return toCsv(content);
 
                 function hasProperties(obj, props) {
@@ -353,7 +356,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                             console.log('missing ' + props[iProp]);
                             return false;
                         }
-			console.log(props[iProp]);
+			//console.log(props[iProp]);
                     }
                     return true;
                 }
@@ -367,10 +370,10 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                 }
             },
             // Set logs into an input (i.e. put them wherever you want)
-            send: function(name, serialize){
-		console.log(serialize);
-		console.log(name);
-                window.minnoJS.logger(serialize);
+            send: function(name, serialized){
+		console.log(serialized);
+		//console.log(name);
+                window.minnoJS.logger(serialized);
             }
         });
 
