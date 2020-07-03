@@ -300,6 +300,8 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                     }
                     else
                     {
+			console.log(iLog);
+			console.log(logs[iLog]);
                         myLogs.push(logs[iLog]);
                     }
                 }
