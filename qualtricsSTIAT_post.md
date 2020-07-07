@@ -4,18 +4,18 @@ title: Running STIAT extention from Qulatrics
 author: Elinor Bengayev
 ---
 
-In this post, I will explain how to run the Single Target IAT (STIAT) in Qualtrics, using Minno.js. First, let’s make sure we all know all the concepts. You are probably reading this because you want to run an STIAT in Qualtrics. So, it is likely that you know what the STIAT is (see [this paper](https://www.researchgate.net/publication/230881869_Reliability_and_validity_of_the_Single-Target_IAT_ST-IAT_Assessing_automatic_affect_towards_multiple_attitude_objects) and what [Qualtrics](https://www.qualtrics.com/uk/customer-experience/surveys/) is.  [Minno.js](https://minnojs.github.io/) is the software developed by [Project Implicit](http://projectimplicit.net/) to run web studies, including reaction-time tasks. 
+In this post, I will explain how to run the Single Target IAT (ST-IAT; some call it the Single-Category IAT) in Qualtrics, using Minno.js. First, let’s make sure we all know all the concepts. You are probably reading this because you want to run an STIAT in Qualtrics. So, it is likely that you know what the STIAT is (see [this paper](https://www.researchgate.net/publication/230881869_Reliability_and_validity_of_the_Single-Target_IAT_ST-IAT_Assessing_automatic_affect_towards_multiple_attitude_objects)) and what [Qualtrics](https://www.qualtrics.com/uk/customer-experience/surveys/) is.  [Minno.js](https://minnojs.github.io/) is the software developed by [Project Implicit](http://projectimplicit.net/) to run web studies, including reaction-time tasks. 
 
-In previous posts, Elad explained [how to run a Minno script from Qualtrics](https://minnojs.github.io/minnojs-blog/qualtrics/), and [Yoav](https://www.tau.ac.il/~baranan/index.html) explained [how to run Project Implicit’s IAT](https://minnojs.github.io/minnojs-blog/qualtrics-iat/) from Qualtrics. This post is very similar to Yoav's but it's about STIAT. 
+In previous posts, Elad explained [how to run a Minno script from Qualtrics](https://minnojs.github.io/minnojs-blog/qualtrics/), and [Yoav](https://www.tau.ac.il/~baranan/index.html) explained [how to run Project Implicit’s IAT](https://minnojs.github.io/minnojs-blog/qualtrics-iat/) from Qualtrics. This post is very similar to Yoav's but it's about ST-IAT. 
 
 
-### Project Implicit's MinnoJS STIAT extension 
-We will use a [modification](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js) of a STIAT MinnoJS [script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/stiat6.js) that Project Implicit has developed. In Project Implicit, we use that script to run the study from Open Minno Suite, our platform for running web studies. Before you decide to use that script in Qualtrics, please consider using our free platform as an alternative to Qualtrics (you can read more about it [here](https://minnojs.github.io/docsite/minnosuitedashboard/)). 
+### Project Implicit's MinnoJS ST-IAT extension 
+We will use a [modification](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js) of a MinnoJS ST-IAT [script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/stiat6.js) that Project Implicit has developed. In Project Implicit, we use that script to run the study from Open Minno Suite, our platform for running web studies. Before you decide to use that script in Qualtrics, please consider using our free platform as an alternative to Qualtrics (you can read more about it [here](https://minnojs.github.io/docsite/minnosuitedashboard/)). 
 
-The script that we created for building STIATs is an extension, implemented as a function that creates an STIAT from a few arguments (i.e., parameters) that the researcher defines. You can read more about the basic idea of using extensions in Minno on [this page](https://github.com/baranan/minno-tasks/blob/master/implicitmeasures.md).
+The script that we created for building ST-IATs is an extension, implemented as a function that creates an ST-IAT from a few arguments (i.e., parameters) that the researcher defines. You can read more about the basic idea of using extensions in Minno on [this page](https://github.com/baranan/minno-tasks/blob/master/implicitmeasures.md).
 
 ### Into Qualtrics
-The STIAT will run from a single question in your survey, separated from any other question by a Page Break, like this:
+The ST-IAT will run from a single question in your survey, separated from any other question by a Page Break, like this:
 
 ![Qualtrics image](https://github.com/minnojs/minnojs-blog/blob/master/images/quiat1.png)
 
@@ -61,13 +61,13 @@ Qualtrics.SurveyEngine.addOnload(function () {
 });
 ```
 
-This code will run our example Qualtric STIAT from [this page](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/exampleSTIAT.js). Start with that example. After you verify that it runs fine on your Qualtrics survey, replace it with your own STIAT (we’ll get to that shortly). 
+This code will run our example Qualtrics ST-IAT from [this page](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/exampleSTIAT.js). Start with that example by simply copying the code above to your question in your Qualtrics questionnaire. After you verify that it runs fine on your Qualtrics survey, replace it with your own ST-IAT (we’ll get to that shortly). 
 
-**IMPORTANT NOTE:** to skip blocks when you’re testing the STIAT, use the key combination: Esc, Enter.
+**IMPORTANT NOTE:** to skip blocks when you’re testing the ST-IAT, use the key combination: Esc, Enter.
 
-### How we define the STIAT
+### How we define the ST-IAT
 
-If you go to [our example](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/exampleSTIAT.js), you will see how simple it can be to define your own STIAT:
+If you go to [our example](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/exampleSTIAT.js), you will see how simple it can be to define your own ST-IAT:
 
 ```js
 define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js'], function(APIConstructor, stiatExtension){
@@ -142,24 +142,24 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
 
 ### Use your own script file
 
-Did you run our race STIAT successfully from your Qualtrics account? If you did, it's time to create your own STIAT. For that, you need to create a script like our example script, and post it online. If you have your own website (e.g., a home directory hosted by your university), you can put that script on that website. It is a static file so pretty much any server will be able to serve it with no issues. Or, you can use a free online service for that. One option is GitHub Pages, which is free and [easy to setup](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). 
+Did you run our race ST-IAT successfully from your Qualtrics account? If you did, it's time to create your own ST-IAT. For that, you need to create a script like our example script, and post it online. If you have your own website (e.g., a home directory hosted by your university), you can put that script on that website. It is a static file so pretty much any server will be able to serve it with no issues. Or, you can use a free online service for that. One option is GitHub Pages, which is free and [easy to setup](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). 
 
-First, just copy my code and put it on your server. Change the url in the JavaScript code you entered to Qualtrics earlier, and see that my STIAT runs fine from your Qualtrics study. 
+First, just copy my code and put it on your server. Change the url in the JavaScript code you entered to Qualtrics earlier, and see that my ST-IAT runs fine from your Qualtrics study. 
 
 ### Define your STIAT
 
-In the first line, we tell Minno where the [full STIAT script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js) is:
+In the first line, we tell Minno where the [full ST-IAT script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js) is:
 `define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js'], function(APIConstructor, stiatExtension){`
 
-Now, change your code to build the STIAT you need. If you’re using photos, put them in your own directory and change your STIAT script to search for images there: base_url: {image:’YOUR URL GOES HERE’}.
+Now, change your code to build the ST-IAT you need. If you’re using photos, put them in your own directory and change your ST-IAT script to search for images there: base_url: {image:’YOUR URL GOES HERE’}.
 If you’re using words rather than photos, you need to update the [media](https://minnojs.github.io/minno-time/0.5/time/API.html#media) object of the categories. For instance: {word: 'Tyrone'}.
 
-If you want to update the attributes, see how the attributes are defined in the [extension script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js) and override them by defining your own attributes in your STIAT script.
-You also can just follow the remarks along the script above and change the wanted variables (e.g the category, attributes, images etc. ).
+If you want to update the attributes, see how the attributes are defined in the [extension script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js) and override them by defining your own attributes in your ST-IAT script.
+You also can just follow the comments along the script above and change the variables you want to change (e.g., the category, attributes, images, etc.).
 
 ### Processing the STIAT data
 
-The original [post](https://minnojs.github.io/minnojs-blog/qualtrics/) about running MinnoJS scripts from Qualtrics explains the how to process the data saved by Qualtrics. 
+The original [post](https://minnojs.github.io/minnojs-blog/qualtrics/) about running MinnoJS scripts from Qualtrics explains how to process the data saved by Qualtrics. To test the data of my example, Yoav created [this R script](https://github.com/baranan/minno-tasks/blob/master/stiat/qualtrics/minno.qualtrics.test.stiat.process.rmd) and it might help you process and score your own data as well.
 
 If you don’t feel comfortable using R, here is how to create a csv file with the IAT data, using Excel. 
 1. Download the data from Qualtrics as csv.
