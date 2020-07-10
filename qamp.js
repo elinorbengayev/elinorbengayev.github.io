@@ -281,7 +281,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
             // we save as CSV because qualtrics limits to 20K characters and this is more efficient.
             serialize: function (name, logs) {
                 //var headers = ['block', 'trial', 'cond', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
-		var headers = ['block','trial','cond', 'type', 'cat',  'stim', 'resp', 'err', 'rt','fb'];
+		var headers = ['block','trial','cond', 'cat',  'stim', 'resp', 'err', 'rt','fb'];
                 console.log(logs);
                 var myLogs = [];
                 var iLog;
@@ -310,13 +310,14 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 		
 		var content=" ";
 		console.log("Content");
+		    
                 content = myLogs.map(function (log) { 
                     return [
                         log.data.block, //'block'
                         log.trial_id, //'trial'
                         log.data.condition, //'cond'
                         //log.data, //'comp'
-                        log.nameForLogging, //'type'
+                        //log.nameForLogging, //'type'
                         log.stimuli[0], //'cat'	    
                         log.mediaArray[0], //'stim'
                         log.responseHandle, //'resp'
@@ -326,13 +327,14 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                         '' //'fb'
                         //'' //'bOrd'
                         ]; });
+		    
 		console.log("got here before printing");
 		console.log("block "+myLogs[4].data.block);
 		console.log("trial "+myLogs[4].trial_id);
 		console.log("cond "+myLogs[4].data.condition);
-		console.log("type "+myLogs[4].nameForLogging);
+		//console.log("type "+myLogs[4].nameForLogging);
 		console.log("stimuli "+myLogs[4].stimuli[0]);
-		console.log("stim "+myLogs[4].mediaArray[0]);
+		console.log("stim "+myLogs[4].media[0]);
 		console.log("resp "+myLogs[4].responseHandle);
 		console.log("err "+myLogs[4].data.score);
 		console.log("rt "+myLogs[4].latency);
@@ -344,7 +346,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                             999, //'trial'
                             'end', //'cond'
                             //'', //'comp'
-                            '', //'type'
+                            //'', //'type'
                             '', //'cat'
                             '', //'stim'
                             '', //'resp'
