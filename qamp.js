@@ -305,10 +305,11 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                         myLogs.push(logs[iLog]);
                     }
                 }
-		//console.log(myLogs);
+		console.log(myLogs);
 		
 		
 		var content=" ";
+		console.log("Content");
                 content = myLogs.map(function (log) { 
                     return [
                         log.data.block, //'block'
@@ -325,7 +326,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                         '' //'fb'
                         //'' //'bOrd'
                         ]; });
-		    
+		console.log("got here before printing");
 		console.log("block "+myLogs[4].data.block);
 		console.log("trial "+myLogs[4].trial_id);
 		console.log("cond "+myLogs[4].data.condition);
