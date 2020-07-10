@@ -306,33 +306,37 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                     }
                 }
 		//console.log(myLogs);
+		
+		
 		var content=" ";
                 content = myLogs.map(function (log) { 
                     return [
                         log.data.block, //'block'
-			console.log("block "+log.data.block)
                         log.trial_id, //'trial'
-			console.log("trial "+log.trial_id)
                         log.data.condition, //'cond'
-			console.log("cond "+log.data.condition)
                         //log.data, //'comp'
                         log.nameForLogging, //'type'
-			console.log("type "+log.nameForLogging)
-                        log.stimuli[0], //'cat'
-			console.log("stimuli "+log..stimuli[0])		    
+                        log.stimuli[0], //'cat'	    
                         log.mediaArray[0], //'stim'
-			console.log("stim "+log..mediaArray[0])
                         log.responseHandle, //'resp'
-			console.log("resp "+log.responseHandle)
                         log.data.score, //'err'
-			console.log("err "+log.data.score)
                         log.latency, //'rt'
-			console.log("rt "+log.latency)
                         //'', //'d'
                         '' //'fb'
                         //'' //'bOrd'
                         ]; });
+		    
+		console.log("block "+myLogs[4].data.block);
+		console.log("trial "+myLogs[4].trial_id);
+		console.log("cond "+myLogs[4].data.condition);
+		console.log("type "+myLogs[4].nameForLogging);
+		console.log("stimuli "+myLogs[4].stimuli[0]);
+		console.log("stim "+myLogs[4].mediaArray[0]);
+		console.log("resp "+myLogs[4].responseHandle);
+		console.log("err "+myLogs[4].data.score);
+		console.log("rt "+myLogs[4].latency);
                 console.log("mapped"+content);
+		    
                 //Add a line with the feedback, score and block-order condition
                 content.push([
                             9, //'block'
