@@ -310,15 +310,24 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                 content = myLogs.map(function (log) { 
                     return [
                         log.data.block, //'block'
+			console.log("block "+log.data.block)
                         log.trial_id, //'trial'
+			console.log("trial "+log.trial_id)
                         log.data.condition, //'cond'
+			console.log("cond "+log.data.condition)
                         //log.data, //'comp'
                         log.nameForLogging, //'type'
+			console.log("type "+log.nameForLogging)
                         log.stimuli[0], //'cat'
+			console.log("stimuli "+log..stimuli[0])		    
                         log.mediaArray[0], //'stim'
+			console.log("stim "+log..mediaArray[0])
                         log.responseHandle, //'resp'
+			console.log("resp "+log.responseHandle)
                         log.data.score, //'err'
+			console.log("err "+log.data.score)
                         log.latency, //'rt'
+			console.log("rt "+log.latency)
                         //'', //'d'
                         '' //'fb'
                         //'' //'bOrd'
