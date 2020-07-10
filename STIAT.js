@@ -278,7 +278,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                         '', //'fb'
                         '' //'bOrd'
                         ]; });
-                //console.log('mapped');
+                console.log('mapped');
                 //Add a line with the feedback, score and block-order condition
                 content.push([
                             9, //'block'
@@ -295,9 +295,10 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                             piCurrent.feedback, //'fb'
                             block2Condition //'bOrd'
                         ]);
-                //console.log(content);
+                console.log(content);
                         
                 content.unshift(headers);
+		console.log("after headers "+content)
                 return toCsv(content);
 
                 function hasProperties(obj, props) {
@@ -326,6 +327,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             },
             // Set logs into an input (i.e. put them wherever you want)
             send: function(name, serialized){
+		console.log(serialized)
                 window.minnoJS.logger(serialized);
             }
         });
