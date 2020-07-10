@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Running STIAT extention from Qulatrics
-author: Elinor Bengayev
+title: Running ST-IAT extention from Qulatrics
+author: elinor_bengayev
 ---
 
-In this post, I will explain how to run the Single Target IAT (ST-IAT; some call it the Single-Category IAT) in Qualtrics, using Minno.js. First, let’s make sure we all know all the concepts. You are probably reading this because you want to run an STIAT in Qualtrics. So, it is likely that you know what the STIAT is (see [this paper](https://www.researchgate.net/publication/230881869_Reliability_and_validity_of_the_Single-Target_IAT_ST-IAT_Assessing_automatic_affect_towards_multiple_attitude_objects)) and what [Qualtrics](https://www.qualtrics.com/uk/customer-experience/surveys/) is.  [Minno.js](https://minnojs.github.io/) is the software developed by [Project Implicit](http://projectimplicit.net/) to run web studies, including reaction-time tasks. 
+In this post, I will explain how to run the Single Target IAT (ST-IAT; some call it the Single-Category IAT) in Qualtrics, using Minno.js. First, let’s make sure we all know all the concepts. You are probably reading this because you want to run an ST-IAT in Qualtrics. So, it is likely that you know what the ST-IAT is (see [this paper](https://www.researchgate.net/publication/230881869_Reliability_and_validity_of_the_Single-Target_IAT_ST-IAT_Assessing_automatic_affect_towards_multiple_attitude_objects)) and what [Qualtrics](https://www.qualtrics.com/uk/customer-experience/surveys/) is.  [Minno.js](https://minnojs.github.io/) is the software developed by [Project Implicit](http://projectimplicit.net/) to run web studies, including reaction-time tasks. 
 
 In previous posts, Elad explained [how to run a Minno script from Qualtrics](https://minnojs.github.io/minnojs-blog/qualtrics/), and [Yoav](https://www.tau.ac.il/~baranan/index.html) explained [how to run Project Implicit’s IAT](https://minnojs.github.io/minnojs-blog/qualtrics-iat/) from Qualtrics. This post is very similar to Yoav's but it's about ST-IAT. 
 
@@ -19,7 +19,7 @@ The ST-IAT will run from a single question in your survey, separated from any ot
 
 ![Qualtrics image](https://github.com/minnojs/minnojs-blog/blob/master/images/quiat1.png)
 
-After creating that question, click the JS icon in the STIAT question, and add the following code: 
+After creating that question, click the JS icon in the ST-IAT question, and add the following code: 
 
 ```js
 Qualtrics.SurveyEngine.addOnload(function () {
@@ -146,7 +146,7 @@ Did you run our race ST-IAT successfully from your Qualtrics account? If you did
 
 First, just copy my code and put it on your server. Change the url in the JavaScript code you entered to Qualtrics earlier, and see that my ST-IAT runs fine from your Qualtrics study. 
 
-### Define your STIAT
+### Define your ST-IAT
 
 In the first line, we tell Minno where the [full ST-IAT script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js) is:
 `define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js'], function(APIConstructor, stiatExtension){`
@@ -157,7 +157,7 @@ If you’re using words rather than photos, you need to update the [media](https
 If you want to update the attributes, see how the attributes are defined in the [extension script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js) and override them by defining your own attributes in your ST-IAT script.
 You also can just follow the comments along the script above and change the variables you want to change (e.g., the category, attributes, images, etc.).
 
-### Processing the STIAT data
+### Processing the ST-IAT data
 
 The original [post](https://minnojs.github.io/minnojs-blog/qualtrics/) about running MinnoJS scripts from Qualtrics explains how to process the data saved by Qualtrics. To test the data of my example, Yoav created [this R script](https://github.com/baranan/minno-tasks/blob/master/stiat/qualtrics/minno.qualtrics.test.stiat.process.rmd) and it might help you process and score your own data as well.
 
@@ -186,9 +186,9 @@ You used MinnoJS platform, which is cited like this:
 
 `Zlotnick, E., Dzikiewicz, A. J., & Bar-Anan, Y. (2015). Minno.js (Version 0.3) [Computer software].`
 
-To cite our Qualtrics-STIAT script, cite this blog post:
+To cite our Qualtrics ST-IAT script, cite this blog post:
 
-`Bengayev, E. (2020, July 9). Running Project Implicit’s STIAT from Qulatrics [Blog post]. Retrieved from https://minnojs.github.io/minnojs-blog/qualtrics-stiat/`
+`Bengayev, E. (2020, July 10). Running Project Implicit’s ST-IAT from Qulatrics [Blog post]. Retrieved from https://minnojs.github.io/minnojs-blog/qualtrics-stiat/`
 
 
 
