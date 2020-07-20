@@ -281,7 +281,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
             // we save as CSV because qualtrics limits to 20K characters and this is more efficient.
             serialize: function (name, logs) {
                 //var headers = ['block', 'trial', 'cond', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
-		var headers = ['block','trial','cond', 'cat', 'resp', 'err', 'rt'];
+		var headers = ['block','trial','cond', 'cat', 'resp', 'err', 'rt','fb'];
                 console.log(logs);
                 var myLogs = [];
                 var iLog;
@@ -324,7 +324,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                         log.data.score, //'err'
                         log.latency, //'rt'
                         //'', //'d'
-                        //'' //'fb'
+                        '' //'fb'
                         //'' //'bOrd'
                         ]; });
 		    
@@ -338,6 +338,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 		console.log("resp "+myLogs[4].responseHandle);
 		console.log("err "+myLogs[4].data.score);
 		console.log("rt "+myLogs[4].latency);
+		console.log("feedback "+piCurrent.feedback);
                 console.log("mapped"+content);
 		    
                 //Add a line with the feedback, score and block-order condition
@@ -353,7 +354,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                             '', //'err'
                             '', //'rt'
                             //piCurrent.d, //'d'
-                            //piCurrent.feedback //'fb'
+                            piCurrent.feedback //'fb'
                             //block2Condition //'bOrd'
                         ]);
                 console.log(content);
