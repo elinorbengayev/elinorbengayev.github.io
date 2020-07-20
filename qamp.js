@@ -387,8 +387,8 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
             },
             // Set logs into an input (i.e. put them wherever you want)
             send: function(name, serialized){
-		//console.log(serialized);
-		//console.log(name);
+		console.log(serialized);
+		console.log(name);
                 window.minnoJS.logger(serialized);
             }
         });
