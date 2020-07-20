@@ -1362,7 +1362,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 				//Save for the task's session.
 				console.log("after computing, feedbackObj");
 				console.log(feedbackObj);
-				//API.addCurrent(feedbackObj);
+				///////API.addCurrent(feedbackObj);
 				piCurrent.feedback = feedbackObj;
 				window.minnoJS.onEnd();
 			}
