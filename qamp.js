@@ -135,7 +135,6 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			
 			base_url : {//Where are your images at?
 				image : 'https://elinorbengayev.github.io/images/'
-				//image : '/implicit/common/all/js/pip/piscripts/amp/images/'
 			}, 
 
 			trialsInBlock : [40, 40, 40], //Number of trials in each block 
@@ -256,7 +255,6 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			fb_att2WithCatA_att1withCatB : 'Your data suggest an automatic preference of CATEGORYA over CATEGORYB.',
 			fb_equal_CatAvsCatB : 'Your data suggest no preference between CATEGORYA and CATEGORYB.'
 		};
-		console.log("got here 2");
 		
 				/**
         **** For Qualtrics
@@ -304,12 +302,9 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			//console.log(logs[iLog]);
                         myLogs.push(logs[iLog]);
                     }
-                }
-		console.log(myLogs);
-		
-		
+                }		
 		var content=" ";
-		console.log("Content");
+
 		    
                 content = myLogs.map(function (log) { 
                     return [
@@ -328,34 +323,17 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                         //'' //'bOrd'
                         ]; });
 		    
-		console.log("got here before printing");
-		console.log("block "+myLogs[4].data.block);
-		console.log("trial "+myLogs[4].trial_id);
-		console.log("cond "+myLogs[4].data.condition);
-		//console.log("type "+myLogs[4].nameForLogging);
-		console.log("stimuli "+myLogs[4].stimuli[0]);
-		//console.log("stim "+myLogs[4].media[0]);
-		console.log("resp "+myLogs[4].responseHandle);
-		console.log("err "+myLogs[4].data.score);
-		console.log("rt "+myLogs[4].latency);
-		console.log("feedback "+piCurrent.feedback.feedback);
-                console.log("mapped"+content);
 		    
                 //Add a line with the feedback, score and block-order condition
                 content.push([
                             9, //'block'
                             999, //'trial'
                             'end', //'cond'
-                            //'', //'comp'
-                            //'', //'type'
                             '', //'cat'
-                            //'', //'stim'
                             '', //'resp'
                             '', //'err'
                             '', //'rt'
-                            //piCurrent.d, //'d'
                             piCurrent.feedback.feedback //'fb'
-                            //block2Condition //'bOrd'
                         ]);
                 console.log(content);
                         
@@ -370,10 +348,8 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                     {
                         if (!obj.hasOwnProperty(props[iProp]))
                         {
-                            console.log('missing ' + props[iProp]);
                             return false;
                         }
-			//console.log(props[iProp]);
                     }
                     return true;
                 }
@@ -388,8 +364,6 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
             },
             // Set logs into an input (i.e. put them wherever you want)
             send: function(name, serialized){
-		console.log(serialized);
-		console.log(name);
                 window.minnoJS.logger(serialized);
             }
         });
@@ -545,7 +519,6 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 				}
 			]
 		});
-	console.log("got here 3");
         //For the 1-7 rating version
 		API.addTrialSets('basicRate', 
 		{
@@ -796,7 +769,6 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			]
 		});
 
-	console.log("got here 4");
 
 
 		/*
@@ -958,7 +930,6 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 				}
 			]
 		});
-	console.log("got here 5");
 
         /**
          * Add rating stimuli
@@ -1015,7 +986,6 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
     			data : {handle:'rate7'}}
     		]
     	});		
-		console.log("got here 6");
 
 		/**
 		Add a stimulus for each prime category
@@ -1169,7 +1139,6 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			);
 			blockNum++;
 		}
-			console.log("got here 7");
 
 		//Final trial
 		trialSequence.push(
@@ -1349,20 +1318,14 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 
 			return ({feedback:feedback});
 		}
-		console.log("got here 8");
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//What to do at the end of the task.
 		API.addSettings('hooks',{
 			endTask: function(){
 				var logs = API.getLogs();//saving the logs
-				//console.log(logs);
-				console.log("into computing");
 				var feedbackObj = piCurrent.responses==2 ? computeAMPScore2(logs) : computeAMPScore7(logs);
 				//Save for the task's session.
-				console.log("after computing, feedbackObj");
-				console.log(feedbackObj);
-				//API.addCurrent(feedbackObj);
 				piCurrent.feedback = feedbackObj;
 				window.minnoJS.onEnd();
 			}
