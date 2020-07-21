@@ -280,7 +280,6 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
             serialize: function (name, logs) {
                 //var headers = ['block', 'trial', 'cond', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
 		var headers = ['block','trial','cond', 'cat', 'resp', 'err', 'rt','fb'];
-                console.log(logs);
                 var myLogs = [];
                 var iLog;
                 for (iLog = 0; iLog < logs.length; iLog++)
@@ -335,11 +334,9 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                             '', //'rt'
                             piCurrent.feedback.feedback //'fb'
                         ]);
-                console.log(content);
+              
                         
                 content.unshift(headers);
-		console.log("after headers");
-		console.log(content);
                 return toCsv(content);
 
                 function hasProperties(obj, props) {
