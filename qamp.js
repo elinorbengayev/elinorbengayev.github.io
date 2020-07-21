@@ -390,7 +390,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
             send: function(name, serialized){
 		console.log(serialized);
 		console.log(name);
-                window.minnoJS.logger("serialized");
+                window.minnoJS.logger(serialized);
             }
         });
 
