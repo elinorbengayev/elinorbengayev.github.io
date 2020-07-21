@@ -264,8 +264,8 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
         API.addSettings('onEnd', window.minnoJS.onEnd);
 
 		//For debugging the logger
-		window.minnoJS.logger = console.log;
-		window.minnoJS.onEnd = console.log;
+		//window.minnoJS.logger = console.log;
+		//window.minnoJS.onEnd = console.log;
 		
         API.addSettings('logger', {
             // gather logs in array
