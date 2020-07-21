@@ -338,7 +338,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 		console.log("resp "+myLogs[4].responseHandle);
 		console.log("err "+myLogs[4].data.score);
 		console.log("rt "+myLogs[4].latency);
-		console.log("feedback "+piCurrent.feedback);
+		console.log("feedback "+piCurrent.feedback.feedback);
                 console.log("mapped"+content);
 		    
                 //Add a line with the feedback, score and block-order condition
@@ -354,7 +354,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
                             '', //'err'
                             '', //'rt'
                             //piCurrent.d, //'d'
-                            piCurrent.feedback //'fb'
+                            piCurrent.feedback.feedback //'fb'
                             //block2Condition //'bOrd'
                         ]);
                 console.log(content);
@@ -1362,7 +1362,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 				//Save for the task's session.
 				console.log("after computing, feedbackObj");
 				console.log(feedbackObj);
-				///////API.addCurrent(feedbackObj);
+				//API.addCurrent(feedbackObj);
 				piCurrent.feedback = feedbackObj;
 				window.minnoJS.onEnd();
 			}
