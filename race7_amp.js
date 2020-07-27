@@ -45,7 +45,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/qualt
 			}
 		],
 
-        responses : 7, 
+        	responses : 7, 
 
 		ITI : 750, //Duration between trials.
 
