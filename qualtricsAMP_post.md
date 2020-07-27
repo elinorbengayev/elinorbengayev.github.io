@@ -145,12 +145,13 @@ In the first line, we tell Minno where the [full AMP script](https://cdn.jsdeliv
 Now, change your code to build the AMP you need. If you’re using photos, put them in your own directory and change your AMP script to search for images there: base_url: {image:’YOUR URL GOES HERE’}.
 If you’re using words rather than photos, you need to update the [media](https://minnojs.github.io/minno-time/0.5/time/API.html#media) object of the categories. For instance: {word: 'Tyrone'}.
 
-If you want to update the attributes, see how the attributes are defined in the [extension script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/qualtrics/qamp.js) and override them by defining your own attributes in your AMP script.
-You also can just follow the comments along the script above and change the variables you want to change (e.g., the category, attributes, images, etc.).
+If you want to change anything in the task, search whether it is a parameter to the task as defined at the top of the [extension script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/qualtrics/qamp.js) and override the parameter by setting it in your AMP script (as we did for a few of the parametersin the example above). 
+
+In our qualtrics-AMP [folder](https://github.com/baranan/minno-tasks/tree/master/amp/qualtrics) on github, you will see a few examples for scripts that use our qualtrics-AMP extension. This includes [an AMP](https://github.com/baranan/minno-tasks/blob/master/amp/qualtrics/race7_amp.js) that uses a 1-7 rating response, instead of the usual pleasant/unpleasant response. 
 
 ### Processing the AMP data
 
-The original [post](https://minnojs.github.io/minnojs-blog/qualtrics/) about running MinnoJS scripts from Qualtrics explains how to process the data saved by Qualtrics. To test the data of my example, Yoav created [this R script](https://github.com/baranan/minno-tasks/blob/master/stiat/qualtrics/minno.qualtrics.test.stiat.process.rmd) and it might help you process and score your own data as well.
+The original [post](https://minnojs.github.io/minnojs-blog/qualtrics/) about running MinnoJS scripts from Qualtrics explains how to process the data saved by Qualtrics. To test the data of my example, Yoav created [this R script](https://github.com/baranan/minno-tasks/blob/master/amp/qualtrics/minno.qualtrics.test.amp.process.rmd) and it might help you process and score your own data as well.
 
 If you don’t feel comfortable using R, here is how to create a csv file with the IAT data, using Excel. 
 1. Download the data from Qualtrics as csv.
