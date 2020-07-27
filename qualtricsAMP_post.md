@@ -12,7 +12,7 @@ In previous posts, Elad explained [how to run a Minno script from Qualtrics](htt
 ### Project Implicit's MinnoJS AMP extension 
 We will use a [modification](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/qualtrics/qamp.js) of a MinnoJS AMP [script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/amp4.js) that Project Implicit has developed. In Project Implicit, we use that script to run the study from Open Minno Suite, our platform for running web studies. Before you decide to use that script in Qualtrics, please consider using our free platform as an alternative to Qualtrics (you can read more about it [here](https://minnojs.github.io/docsite/minnosuitedashboard/)). 
 
-The script that we created for building AMPs is an extension, implemented as a function that creates an AMP from a few arguments (i.e., parameters) that the researcher defines. You can read more about the basic idea of using extensions in Minno on [this page](https://github.com/baranan/minno-tasks/blob/master/implicitmeasures.md).
+The script that we created for building an AMP is an extension, implemented as a function that creates an AMP from a few arguments (i.e., parameters) that the researcher defines. You can read more about the basic idea of using extensions in Minno on [this page](https://github.com/baranan/minno-tasks/blob/master/implicitmeasures.md).
 
 ### Into Qualtrics
 The AMP will run from a single question in your survey, separated from any other question by a Page Break, like this:
@@ -70,9 +70,7 @@ This code will run our example Qualtrics AMP from [this page](https://cdn.jsdeli
 If you go to [our example](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/qualtrics/race_amp.js), you will see how simple it can be to define your own AMP:
 
 ```js
-define(['pipAPI', 'https://elinorbengayev.github.io/qamp.js'], function(APIConstructor, ampExtension){
-//define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/amp4.js'], function(APIConstructor, ampExtension){
-
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/qualtrics/qamp.js'], function(APIConstructor, ampExtension){
 
 	var API = new APIConstructor();
 	
@@ -126,7 +124,7 @@ define(['pipAPI', 'https://elinorbengayev.github.io/qamp.js'], function(APIConst
 		},
 
 		base_url : {//Where are your images at?
-			image : 'https://elinorbengayev.github.io/images/'
+			image : 'https://baranan.github.io/minno-tasks/images/ampImages'
 		}
 	});
 });
@@ -181,7 +179,7 @@ You used MinnoJS platform, which is cited like this:
 
 To cite our Qualtrics AMP script, cite this blog post:
 
-`Bengayev, E. (2020, July 10). Running Project Implicit’s AMP from Qulatrics [Blog post]. Retrieved from https://minnojs.github.io/minnojs-blog/qualtrics-amp/`
+`Bengayev, E. (2020, July 31). Running Project Implicit’s AMP from Qulatrics [Blog post]. Retrieved from https://minnojs.github.io/minnojs-blog/qualtrics-amp/`
 
 
 
