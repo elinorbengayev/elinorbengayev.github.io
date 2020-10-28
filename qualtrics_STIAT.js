@@ -64,3 +64,5 @@ define(['pipAPI', 'https://elinorbengayev.github.io/STIAT.js'], function(APICons
   }}
   );
   });
+
+//////testing
