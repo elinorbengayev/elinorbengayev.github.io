@@ -1,4 +1,6 @@
-define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js"], function(APIConstructor, iatExtension)var API = new APIConstructor(); return iatExtension({{
+define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js"], function(APIConstructor, iatExtension) {
+       var API = new APIConstructor(); 
+       return iatExtension({
     category1: {
         name: "Dogs",
         title: {
@@ -7,7 +9,7 @@ define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
             },
             css: {
                 color: "#e35431",
-                font-size: "1.8em"
+                "font-size": "1.8em"
             },
             height: 4
         },
@@ -24,7 +26,7 @@ define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
         ],
         stimulusCss: {
             color: "#d572cd",
-            font-size: "7em"
+            "font-size": "7em"
         }
     },
     category2: {
@@ -35,7 +37,7 @@ define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
             },
             css: {
                 color: "#5778db",
-                font-size: "1.8em"
+                "font-size": "1.8em"
             },
             height: 4
         },
@@ -49,7 +51,7 @@ define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
         ],
         stimulusCss: {
             color: "#336600",
-            font-size: "1.8em"
+            "font-size": "1.8em"
         }
     },
     attribute1: {
@@ -60,7 +62,7 @@ define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
             },
             css: {
                 color: "#336600",
-                font-size: "1.8em"
+                "font-size": "1.8em"
             },
             height: 4
         },
@@ -77,7 +79,7 @@ define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
         ],
         stimulusCss: {
             color: "#336600",
-            font-size: "2.3em"
+            "font-size": "2.3em"
         }
     },
     attribute2: {
@@ -88,7 +90,7 @@ define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
             },
             css: {
                 color: "#336600",
-                font-size: "1.8em"
+                "font-size": "1.8em"
             },
             height: 4
         },
@@ -102,10 +104,10 @@ define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
         ],
         stimulusCss: {
             color: "#336600",
-            font-size: "2.3em"
+            "font-size": "2.3em"
         }
     },
-    base_url: ,
+    base_url: "",
     remindError: true,
     errorCorrection: true,
     isQualtrics: true,
@@ -134,4 +136,6 @@ define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtr
     SecondCombinedBlockInstructions: "<div><p align=\center\ style=\font-size:20px; font-family:arial\><font color=\#000000\><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\>This is the same as the previous part.<br/>Use the <b>E</b> key for <font color=\#336600\>leftCategory</font> and for <font color=\#0000ff\>leftAttribute</font>.<br/>Use the <b>I</b> key for <font color=\#336600\>rightCategory</font> and for  <font color=\#0000ff\>rightAttribute</font>.<br/>Each item belongs to only one category.<br/><br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p align=\center\>Press the <b>space bar</b> when you are ready to start.</font></p></div>",
     SwitchedCategoriesInstructions: "<div><p align=\center\ style=\font-size:20px; font-family:arial\><font color=\#000000\><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\><b>Watch out, the labels have changed position!</b><br/>Put the left finger on the <b>E</b> key for <font color=\#336600\>leftCategory</font>.<br/>Put the right finger on the <b>I</b> key for <font color=\#336600\>rightCategory</font>.<br/><br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p align=\center\>Press the <b>space bar</b> when you are ready to start.</font></p></div>",
     PreDebriefingText: "Press space to continue to your feedback"
-})};
+}
+)
+});
