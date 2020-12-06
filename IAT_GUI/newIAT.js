@@ -1,7 +1,6 @@
-define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat8.js"], function(APIConstructor, iatExtension) 
-{
-    var API = new APIConstructor(); 
-    return iatExtension({
+define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js"], function(APIConstructor, iatExtension) 
+{var API = new APIConstructor(); 
+return iatExtension({
     "category1": {
         "name": "Dogs",
         "title": {
@@ -111,9 +110,9 @@ define(['pipAPI',"https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat8.j
     "base_url": "",
     "remindError": true,
     "errorCorrection": true,
-    //"isQualtrics": true,
+    "isQualtrics": true,
     "showDebriefing": true,
-    //"fullscreen": true,
+    "fullscreen": true,
     "isTouch": true,
     "blockCategories_nTrials": 10,
     "blockCategories_nMiniBlocks": 3,
