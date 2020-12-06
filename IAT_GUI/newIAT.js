@@ -5,7 +5,7 @@ return iatExtension({
         "name": "Dogs",
         "title": {
             "media": {
-                "image": "Dogs"
+                "word": "Dogs"
             },
             "css": {
                 "color": "#e35431",
