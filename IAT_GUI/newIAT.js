@@ -18,7 +18,7 @@ return iatExtension({
                 "word": "chiwawa"
             },
             {
-                "image": "labrador"
+                "word": "labrador"
             },
             {
                 "word": "haski"
@@ -99,7 +99,7 @@ return iatExtension({
                 "word": "lovely"
             },
             {
-                "image": "best"
+                "word": "best"
             }
         ],
         "stimulusCss": {
