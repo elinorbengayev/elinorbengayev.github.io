@@ -3,7 +3,7 @@ define(['pipAPI', 'https://galmaimon.github.io/BIAT.js'], function(APIConstructo
 
 	
 	return iatExtension({
-		istouch:false,
+		istouch:true,
 		practiceCategory1 : 
 			{
 				name : 'Mammals', //Will appear in the data.
