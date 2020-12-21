@@ -3,7 +3,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
 
 	
 	return iatExtension({
-		istouch: false,
+		isTouch: true,
 		practiceCategory1 : 
 			{
 				name : 'Mammals', //Will appear in the data.
