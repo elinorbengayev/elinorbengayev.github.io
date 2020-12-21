@@ -1,9 +1,8 @@
 define(['pipAPI', 'https://elinorbengayev.github.io/biat.js'], function(APIConstructor, iatExtension){
- var API = new APIConstructor();
+  var API = new APIConstructor();
 
 	
 	return iatExtension({
-		isTouch: true,
 		practiceCategory1 : 
 			{
 				name : 'Mammals', //Will appear in the data.
@@ -58,9 +57,10 @@ define(['pipAPI', 'https://elinorbengayev.github.io/biat.js'], function(APIConst
 						height : 4, //Height (because we need to know where to put the next item in the title)
 						startStimulus : { 
 						//If you're using a startStimulus, set here. If not, set the parameter showStimuliWithInst to false (see later below)
-						media : {image : 'blacks.jpg'}, 
+						media : {image : 'black1.jpg', image: 'black2.jpg' }
+							
 							css : {color:'#31b404','font-size':'1em'}, 
-							height : 13
+							height : 2
 						}
 					}, 
 					stimulusMedia : [ //Stimuli content as PIP's media objects
@@ -83,7 +83,7 @@ define(['pipAPI', 'https://elinorbengayev.github.io/biat.js'], function(APIConst
 						startStimulus : {
 							media : {image : 'whites.jpg'},  
 							css : {color:'#31b404','font-size':'1em'}, 
-							height : 13
+							height : 2
 						}
 					}, 
 					stimulusMedia : [ //Stimuli content as PIP's media objects
@@ -99,9 +99,11 @@ define(['pipAPI', 'https://elinorbengayev.github.io/biat.js'], function(APIConst
 				}
 			],
 			base_url : {//Where are your images at?
-			image : 'https://baranan.github.io/minno-tasks/images/'
+				image : 'https://baranan.github.io/minno-tasks/images/'
 				
 			} 
 	});
 });
+
+
 
