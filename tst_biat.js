@@ -20,6 +20,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor,Scorer, _) {
 	Run the task in order to learn about the name of these variables, when they are saved at the explicit table.
 	
 	Created by: Yoav Bar-Anan (baranan@gmail.com).
+	Modified by: Gal Maimon
 	**/
 
 	function iatExtension(options)
@@ -31,7 +32,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor,Scorer, _) {
 		//You can also do that from the outside, with a dedicated jsp file.
 		var batObj = 
 		{
-			istouch:false, //Set whether the task is on a touch device.
+			isTouch:false, //Set whether the task is on a touch device.
 			//Set the canvas of the task
 			canvas : {
 				maxWidth: 725,
@@ -309,7 +310,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor,Scorer, _) {
 		};
 		
 		// extend the current object with the default
-		_.defaults(piCurrent, options, batObj);
+		_.extend(piCurrent, _.defaults(options, batObj));
 		_.extend(API.script.settings, options.settings);
 		
         /**
@@ -334,7 +335,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor,Scorer, _) {
             // Transform logs into a string
             // we save as CSV because qualtrics limits to 20K characters and this is more efficient.
             serialize: function (name, logs) {
-                var headers = ['block', 'trial', 'cond', 'comp', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'fb'];
+                var headers = ['block', 'trial', 'cond', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'fb'];
                 //console.log(logs);
                 var myLogs = [];
                 var iLog;
