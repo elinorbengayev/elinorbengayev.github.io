@@ -1,9 +1,9 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat6.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qbiat6.js'], function(APIConstructor, iatExtension){
  var API = new APIConstructor();
 
 	
 	return iatExtension({
-		isTouch: false,
+		isTouch: true,
 		practiceCategory1 : 
 			{
 				name : 'Mammals', //Will appear in the data.
