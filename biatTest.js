@@ -266,6 +266,7 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
     "remindError": true,
     "showStimuliWithInst": true,
     "practiceBlock": true,
+    "isQualtrics": true,
     "nMiniBlocks": 1,
     "nTrialsPerMiniBlock": 16,
     "nPracticeBlockTrials": 8,
