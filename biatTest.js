@@ -1,4 +1,7 @@
-define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat9.js'], function(APIConstructor, iatExtension) {var API = new APIConstructor(); return iatExtension({
+define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat9.js'], function(APIConstructor, iatExtension)
+       {
+    var API = new APIConstructor(); return iatExtension({
+    "isTouch": false,
     "practiceCategory1": {
         "name": "Mammals",
         "title": {
@@ -262,9 +265,7 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
     "base_url": "",
     "remindError": true,
     "showStimuliWithInst": true,
-    "isTouch": false,
     "practiceBlock": true,
-    "isQualtrics": true,
     "nMiniBlocks": 1,
     "nTrialsPerMiniBlock": 16,
     "nPracticeBlockTrials": 8,
