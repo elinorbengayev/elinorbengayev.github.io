@@ -353,20 +353,17 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         API.addSettings('logger', {
             // gather logs in array
             onRow: function(logName, log, settings, ctx){
-		console.log('log', log, 'settings', settings, 'ctx', ctx)
                 if (!ctx.logs) ctx.logs = [];
                 ctx.logs.push(log);
             },
             // onEnd trigger save (by returning a value)
             onEnd: function(name, settings, ctx){
-		console.log('ctx after', ctx);
                 return ctx.logs;
             },
             // Transform logs into a string
             // we save as CSV because qualtrics limits to 20K characters and this is more efficient.
             serialize: function (name, logs) {
                 var headers = ['block', 'trial', 'cond', 'comp', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
-                //console.log("logs", logs);
                 var myLogs = [];
                 var iLog;
                 for (iLog = 0; iLog < logs.length; iLog++)
@@ -387,7 +384,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                         myLogs.push(logs[iLog]);
                     }
                 }
-                //console.log("myLogs", myLogs);
                 var content = myLogs.map(function (log) { 
                     return [
                         log.data.block, //'block'
@@ -422,7 +418,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                         ]);
                         
                 content.unshift(headers);
-		//console.log('content', content);
                 return toCsv(content);
 
                 function hasProperties(obj, props) {
@@ -449,6 +444,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             // Set logs into an input (i.e. put them wherever you want)
             send: function(name, serialized){
 		console.log('serialized', serialized);
+		//If (length(serialized) > 20000 & alertIfDataMaxedOut == true) 
                 window.minnoJS.logger(serialized);
             }
         });
