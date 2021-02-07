@@ -154,7 +154,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			ITIDuration : 250, //Duration between trials.
 			
 			alertIfDataMaxedOut : true, //Alert if the data passed Qualtrics data limitiation of 20K characters.
-			shortData: true, //Shorten the data?
+			shortData: false, //Shorten the data?
 
 			fontColor : '#000000', //The default color used for printed messages.
 			
@@ -388,7 +388,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     }
                 }
                 var content = myLogs.map(function (log) { 
-			if(piCurrent.shortData == true) log = ShortenData(log);
+			if(piCurrent.shortData) log = ShortenData(log);
                     return [
                         log.data.block, //'block'
                         log.trial_id, //'trial'
