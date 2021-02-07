@@ -154,7 +154,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			ITIDuration : 250, //Duration between trials.
 			
 			alertIfDataMaxedOut : true, //Alert if the data passed Qualtrics data limitiation of 20K characters.
-			shortData: false, //Shorten the data?
+			shortData: true, //Shorten the data?
 
 			fontColor : '#000000', //The default color used for printed messages.
 			
