@@ -152,6 +152,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			errorCorrection : true, //Should participants correct error responses?
 			errorFBDuration : 500, //Duration of error feedback display (relevant only when errorCorrection is false)
 			ITIDuration : 250, //Duration between trials.
+			
+			alertIfDataMaxedOut : true, //Alert if the data passed Qualtrics data limitiation of 20K characters.
+			shortData: false, //Shorten the data?
 
 			fontColor : '#000000', //The default color used for printed messages.
 			
@@ -443,8 +446,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             },
             // Set logs into an input (i.e. put them wherever you want)
             send: function(name, serialized){
-		console.log('serialized', serialized);
-		//If (length(serialized) > 20000 & alertIfDataMaxedOut == true) 
+		console.log('serialized', serialized.length,"flag",piCurrent.alertIfDataMaxedOut);
+		If (serialized.length > 20000 & piCurrent.alertIfDataMaxedOut == true)
+		    alert(“Data are too long for Qualtrics. Consider setting the parameter shortData to true”);
                 window.minnoJS.logger(serialized);
             }
         });
