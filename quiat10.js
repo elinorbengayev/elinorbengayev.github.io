@@ -155,6 +155,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			
 			alertIfDataMaxedOut : true, //Alert if the data passed Qualtrics data limitiation of 20K characters.
 			shortData: false, //Shorten the data?
+			dataLength: 0, 
 
 			fontColor : '#000000', //The default color used for printed messages.
 			
@@ -447,8 +448,10 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             // Set logs into an input (i.e. put them wherever you want)
             send: function(name, serialized){
 		console.log('serialized', serialized.length,"flag",piCurrent.alertIfDataMaxedOut);
-		if (serialized.length > 20000 && piCurrent.alertIfDataMaxedOut === true)
-		    console.log('Data are too long for Qualtrics. Consider setting the parameter shortData to true');
+		//piCurrent.dataLength = serialized.length
+		if (serialized.length > 20000 && piCurrent.alertIfDataMaxedOut === true){
+		    alert('Data are too long for Qualtrics. Consider setting the parameter shortData to true');
+		}
                 window.minnoJS.logger(serialized);
             }
         });
