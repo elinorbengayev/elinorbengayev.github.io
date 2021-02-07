@@ -388,12 +388,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     }
                 }
                 var content = myLogs.map(function (log) { 
-			console.log('log.data.condition', log.data.condition, 'log.stimuli[0]', log.stimuli[0], 'log.media[0]', log.media[0]);
-			//if(piCurrent.shortData == true){
-			log = ShortenData(log);
-			console.log('AFTER');
-			console.log('log.data.condition', log.data.condition, 'log.stimuli[0]', log.stimuli[0], 'log.media[0]', log.media[0]);
-			//}
+			if(piCurrent.shortData == true) log = ShortenData(log);
                     return [
                         log.data.block, //'block'
                         log.trial_id, //'trial'
@@ -437,24 +432,22 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			
 			var name = [att1.name, att2.name, cat1.name, cat2.name];
 			var nameReplace = ['att1','att2','cat1','cat2'];
-			var allLists = [att1.stimulusMedia, att2.stimulusMedia, cat1.stimulusMedia, cat2.stimulusMedia];
-			
+			//replace log.stimuli[0]
 			var index = name.indexOf(log.stimuli[0]);
 			log.stimuli[0] = nameReplace[index];
-			
+			//replace log.data.condition
 			var condA = log.data.condition.split(',')[0];
 			var condB = log.data.condition.split(',')[1];	
 			log.data.condition = nameReplace[name.indexOf(condA.split('/')[0])]+'/'+nameReplace[name.indexOf(condA.split('/')[1])]+
 				','+nameReplace[name.indexOf(condB.split('/')[0])]+'/'+nameReplace[name.indexOf(condB.split('/')[1])];
-			
+			//replace log.media[0]
+			var allLists = [att1.stimulusMedia, att2.stimulusMedia, cat1.stimulusMedia, cat2.stimulusMedia];
 			var stimuliList = allLists[index].map(object => object.image || object.word);
 			var indexStimulus = stimuliList.indexOf(log.media[0]); //stimulus index in it's stimuli array
-			console.log(indexStimulus, stimuliList[index]);
 			if (index === 0) log.media[0] = 'a'+'1'+'s'+(indexStimulus+1);
 			if (index === 1) log.media[0] = 'a'+'2'+'s'+(indexStimulus+1);
 			if (index === 2) log.media[0] = 'c'+'1'+'s'+(indexStimulus+1);
 			if (index === 3) log.media[0] = 'c'+'2'+'s'+(indexStimulus+1);
-
 			
 			return log;
 		}
