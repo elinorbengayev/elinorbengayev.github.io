@@ -40,6 +40,7 @@ define(['pipAPI', 'https://elinorbengayev.github.io/quiat10.js'], function(APICo
 
 		base_url : {//Where are your images at?
 			image : 'https://baranan.github.io/minno-tasks/images/'
-		} 
+		},
+		shortData : true;
 	});
 });
