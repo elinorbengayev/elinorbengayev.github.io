@@ -447,7 +447,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             // Set logs into an input (i.e. put them wherever you want)
             send: function(name, serialized){
 		console.log('serialized', serialized.length,"flag",piCurrent.alertIfDataMaxedOut);
-		If (serialized.length > 20000 && piCurrent.alertIfDataMaxedOut == true)
+		if (serialized.length > 20000 && piCurrent.alertIfDataMaxedOut === true)
 		    alert('Data are too long for Qualtrics. Consider setting the parameter shortData to true');
                 window.minnoJS.logger(serialized);
             }
