@@ -448,7 +448,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             send: function(name, serialized){
 		console.log('serialized', serialized.length,"flag",piCurrent.alertIfDataMaxedOut);
 		If (serialized.length > 20000 && piCurrent.alertIfDataMaxedOut == true)
-		    alert(“Data are too long for Qualtrics. Consider setting the parameter shortData to true”);
+		    alert('Data are too long for Qualtrics. Consider setting the parameter shortData to true');
                 window.minnoJS.logger(serialized);
             }
         });
