@@ -389,6 +389,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                 }
                 var content = myLogs.map(function (log) { 
 			console.log('log.data.condition', log.data.condition, 'log.stimuli[0]', log.stimuli[0], 'log.media[0]', log.media[0]);
+			//if(piCurrent.shortData == true){
+			log = ShortenData(log);
+			console.log('AFTER');
+			console.log('log.data.condition', log.data.condition, 'log.stimuli[0]', log.stimuli[0], 'log.media[0]', log.media[0]);
+			//}
                     return [
                         log.data.block, //'block'
                         log.trial_id, //'trial'
@@ -423,6 +428,31 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                         
                 content.unshift(headers);
                 return toCsv(content);
+		    
+		function ShortenData(log){
+			var att1 = piCurrent.attribute1;
+			var att2 = piCurrent.attribute2;
+			var cat1 = piCurrent.category1;
+			var cat2 = piCurrent.category2;
+			
+			var name = [att1.name, att2.name, cat1.name, cat2.name];
+			var nameReplace = ['att1','att2','cat1','cat2'];
+			var stimuluslist = [att1.stimulusMedia, att2.stimulusMedia, cat1.stimulusMedia, cat2.stimulusMedia];
+			
+			var index = name.indexOf(log.stimuli[0]);
+			log.stimuli[0] = nameReplace[index];
+			
+			var condA = log.data.condition.split(',')[0];
+			var condB = log.data.condition.split(',')[1];	
+			log.data.condition = nameReplace[name.indexOf(condA.split('/')[0])]+'/'+nameReplace[name.indexOf(condA.split('/')[1])]+
+				','+nameReplace[name.indexOf(condB.split('/')[0])]+'/'+nameReplace[name.indexOf(condB.split('/')[1])];
+			
+			var indexStimulus = stimuluslist[index].indexOf(log.media[0]); //stimulus index in it's stimuli array
+			if (index < 2) log.media[0] = 'a'+(index+1)+'s'+(indexStimulus+1);
+			else log.media[0] = 'c'+(index+1)+'s'+(indexStimulus+1);
+			
+			return log;
+		}
 
                 function hasProperties(obj, props) {
                     var iProp;
