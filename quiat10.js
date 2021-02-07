@@ -448,8 +448,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				','+nameReplace[name.indexOf(condB.split('/')[0])]+'/'+nameReplace[name.indexOf(condB.split('/')[1])];
 			
 			var indexStimulus = stimuluslist[index].indexOf(log.media[0]); //stimulus index in it's stimuli array
-			if (index < 2) log.media[0] = 'a'+(index+1)+'s'+(indexStimulus+1);
-			else log.media[0] = 'c'+(index+1)+'s'+(indexStimulus+1);
+			console.log(indexStimulus, stimuluslist[index]);
+			if (index === 0) log.media[0] = 'a'+'1'+'s'+(indexStimulus+1);
+			if (index === 1) log.media[0] = 'a'+'2'+'s'+(indexStimulus+1);
+			if (index === 2) log.media[0] = 'c'+'1'+'s'+(indexStimulus+1);
+			if (index === 3) log.media[0] = 'c'+'2'+'s'+(indexStimulus+1);
+
 			
 			return log;
 		}
