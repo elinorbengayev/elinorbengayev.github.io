@@ -1,4 +1,4 @@
-define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/STIAT/qualtrics/qstiat6.js'], function(APIConstructor, stiatExtension) {var API = new APIConstructor(); return stiatExtension({
+define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js'], function(APIConstructor, stiatExtension) {var API = new APIConstructor(); return stiatExtension({
     "category": {
         "name": "BlacK",
         "title": {
