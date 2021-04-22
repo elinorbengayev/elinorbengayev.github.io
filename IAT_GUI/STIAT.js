@@ -139,4 +139,5 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/STIAT/qua
     "instTemplateCategoryRight": "",
     "instTemplateCategoryLeft": "",
     "textOnError": ""
-})});
+});
+});
