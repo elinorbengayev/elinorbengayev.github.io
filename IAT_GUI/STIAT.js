@@ -11,7 +11,7 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
             },
             "height": 4
         },
-        "stimulusMedia": [
+        "media": [
             {
                 "word": "Tayron"
             },
@@ -51,7 +51,7 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
             },
             "height": 4
         },
-        "stimulusMedia": [],
+        "media": [],
         "css": {
             "color": "#31b404",
             "font-size": "2em"
@@ -69,7 +69,7 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
             },
             "height": 4
         },
-        "stimulusMedia": [],
+        "media": [],
         "css": {
             "color": "#31b404",
             "font-size": "2em"
