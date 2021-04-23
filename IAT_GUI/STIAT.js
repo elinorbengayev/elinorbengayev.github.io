@@ -15,7 +15,26 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
             "color": "#31b404",
             "font-size": "2em"
         },
-        "media": []
+        "media": [
+            {
+                "word": "Tayron"
+            },
+            {
+                "word": "Malik"
+            },
+            {
+                "word": "Terrell"
+            },
+            {
+                "word": "Jazamin"
+            },
+            {
+                "word": "Tiara"
+            },
+            {
+                "word": "Shanice"
+            }
+        ]
     },
     "attribute1": {
         "name": "Un",
@@ -33,7 +52,14 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
             "color": "#31b404",
             "font-size": "2em"
         },
-        "media": []
+        				media : [ //Stimuli
+					{word: 'Tyron'},
+					{word: 'Malik'},
+					{word: 'Terrell'},
+					{word: 'Jazmin'},
+					{word: 'Tiara'},
+					{word: 'Shanice'}
+				],
     },
     "attribute2": {
         "name": "Pleasantil",
