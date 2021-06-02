@@ -162,7 +162,7 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
             "name": "rfrfewf",
             "title": {
                 "media": {
-                    "image": "rwere"
+                    "word": "rwere"
                 },
                 "css": {
                     "color": "#000000",
