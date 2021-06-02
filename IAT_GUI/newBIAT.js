@@ -110,7 +110,7 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
                 "height": 4,
                 "startStimulus": {
                     "media": {
-                        "image": ""
+                        "word": ""
                     },
                     "css": {
                         "color": "#000000",
