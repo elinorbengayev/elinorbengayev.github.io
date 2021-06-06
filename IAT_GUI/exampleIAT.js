@@ -1,4 +1,4 @@
-define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension) {var API = new APIConstructor(); return iatExtension({
+define(['pipAPI' ,'https://elinorbengayev.github.io/quiat10.js'], function(APIConstructor, iatExtension) {var API = new APIConstructor(); return iatExtension({
     "category1": {
         "name": "Black people!!!",
         "title": {
@@ -163,6 +163,9 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
         }
     },
     "base_url": "",
+    "leftKey": 'L',
+    "rightKey": "R",
+    "shortData": true, 
     "remindError": true,
     "errorCorrection": false,
     "isTouch": false,
@@ -182,8 +185,8 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
     "randomBlockOrder": true,
     "randomAttSide": false,
     "textOnError": "<p style=\"font-size:0.6em;font-family:arial serif;text-align:center;\">If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Press the other key to continue.<p/>",
-    "leftKeyText": "Press \"E\" for cscscs",
-    "rightKeyText": "Press \"I\" forcscsc",
+    "leftKeyText": "Press \"L\" for",
+    "rightKeyText": "Press \"R\" for",
     "orKeyText": "orcscscscscs",
     "AttributesBlockInstructions": "<div><p  style=\"font-size:20px;font-family:arial serif;text-align:center;\"><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\"font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\">Put a left finger on the <b>E</b> key for items that belong to the category <font-color=\"#0000ff\">leftAttribute.</font><br/>Put a right finger on the <b>I</b> key for items that belong to the category <font-color=\"#0000ff\">rightAttribute</font>.<br/><br/>If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Press the other key to continue.<br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p style=\"text-align:center;\">Press the <b>space bar</b> when you are ready to start.</font></p></div>",
     "CategoriesBlockInstructions": "<div><p style=\"font-size:20px; font-family:arial serif;text-align:center;\"><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\"font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\">Put a left finger on the <b>E</b> key for items that belong to the category <font-color=\"#336600\">leftCategory</font>. <br/>Put a right finger on the <b>I</b> key for items that belong to the category <font-color=\"#336600\">rightCategory</font>.<br/>Items will appear one at a time.<br/><br/>If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Press the other key to continue.<br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p style=\"text-align:center;\">Press the <b>space bar</b> when you are ready to start.</font></p></div>",
