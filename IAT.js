@@ -165,7 +165,7 @@ define(['pipAPI' ,'https://elinorbengayev.github.io/quiat10.js'], function(APICo
     "base_url": "",
     "remindError": true,
     "errorCorrection": false,
-    "isTouch": true,
+    "isTouch": false,
     "isQualtrics": true,
     "showDebriefing": false,
     "fullscreen": true,
