@@ -391,7 +391,10 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     
                 }
                 var content = myLogs.map(function (log) { 
-			if(piCurrent.shortData) log = ShortenData(log);
+			console.log(piCurrent.shortData)
+			if(piCurrent.shortData) {
+				log = ShortenData(log);
+			}
                     return [
                         log.data.block, //'block'
                         log.trial_id, //'trial'
