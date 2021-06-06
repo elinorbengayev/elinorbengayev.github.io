@@ -1,7 +1,8 @@
-define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js'], function(APIConstructor, iatExtension){
+define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
 
 	var baseURL = 'https://baranan.github.io/minno-tasks/images/';
 	return iatExtension({
+		fullscreen: true,
         category2 : {
             name : 'Black Americans', //Will appear in the data.
             title : {
