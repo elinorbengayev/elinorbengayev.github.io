@@ -449,6 +449,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			if (index === 2) log.media[0] = 'c'+'1'+'s'+(indexStimulus+1);
 			if (index === 3) log.media[0] = 'c'+'2'+'s'+(indexStimulus+1);
 			
+			console.log(log);
+			
 			return log;
 		}
 
