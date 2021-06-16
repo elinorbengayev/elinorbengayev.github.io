@@ -352,6 +352,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         /**
         **** For Qualtrics
         */
+	console.log("before FS")
+	enterFullScreen(document.documentElement)
+	console.log("after FS")
         API.addSettings('onEnd', window.minnoJS.onEnd);
 
 		//For debugging the logger
@@ -512,15 +515,17 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			cat1.stimulusCss.maxHeight = maxH;
 			cat2.stimulusCss.maxHeight = maxH;
 		}
-		if(fullscreen){
-			var el = document.documentElement;
-			var rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
-			//var rfs = el.mozRequestFullScreen || el.msRequestFullscreen;
-			if (rfs) rfs.call(el);
-			else if(window.ActiveXObject){
-		// for Internet Explorer
-			var wscript = new window.ActiveXObject('WScript.Shell');
-			if (wscript!=null) wscript.SendKeys('{F11}');
+		function enterFullScreen(el){
+			if(fullscreen){
+				//var el = document.documentElement;
+				var rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+				//var rfs = el.mozRequestFullScreen || el.msRequestFullscreen;
+				if (rfs) rfs.call(el);
+				else if(window.ActiveXObject){
+			// for Internet Explorer
+				var wscript = new window.ActiveXObject('WScript.Shell');
+				if (wscript!=null) wscript.SendKeys('{F11}');
+				}
 			}
 		}
 
