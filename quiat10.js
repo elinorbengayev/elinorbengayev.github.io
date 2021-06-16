@@ -518,6 +518,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		function enterFullScreen(el){
 			if(fullscreen){
 				//var el = document.documentElement;
+				console.log("FS", fullscreen);
+				console.log("elem", el);
 				var rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
 				//var rfs = el.mozRequestFullScreen || el.msRequestFullscreen;
 				console.log(rfs);
