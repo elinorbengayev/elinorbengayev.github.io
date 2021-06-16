@@ -520,6 +520,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				//var el = document.documentElement;
 				var rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
 				//var rfs = el.mozRequestFullScreen || el.msRequestFullscreen;
+				console.log(rfs);
 				if (rfs) rfs.call(el);
 				else if(window.ActiveXObject){
 			// for Internet Explorer
