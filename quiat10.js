@@ -352,9 +352,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         /**
         **** For Qualtrics
         */
-	console.log("before FS")
-	enterFullScreen(document.documentElement)
-	console.log("after FS")
         API.addSettings('onEnd', window.minnoJS.onEnd);
 
 		//For debugging the logger
@@ -515,9 +512,13 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			cat1.stimulusCss.maxHeight = maxH;
 			cat2.stimulusCss.maxHeight = maxH;
 		}
+		console.log("before FS")
+		enterFullScreen(document.documentElement)
+		console.log("after FS")
 		function enterFullScreen(el){
 			if(fullscreen){
 				//var el = document.documentElement;
+				console.log("FS");
 				console.log("FS", fullscreen);
 				console.log("elem", el);
 				var rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
