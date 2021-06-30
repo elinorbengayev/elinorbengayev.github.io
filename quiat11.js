@@ -880,7 +880,9 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 		function getInstTrial(params)
 		{
 			var instParams = {isInst : true};
+			console.log('bef', instParams.leftKey)
 			instParams.leftKey = piCurrent.leftKey.toUpperCase();
+			console.log('after', instParams.leftKey)
 			instParams.rightKey = piCurrent.rightKey.toUpperCase();
 			//The names of the category and attribute labels.
 			if (params.nCats == 2)
