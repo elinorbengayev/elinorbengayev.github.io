@@ -41,6 +41,9 @@ define(['pipAPI', 'https://elinorbengayev.github.io/quiat11.js'], function(APICo
 		base_url : {//Where are your images at?
 			image : 'https://baranan.github.io/minno-tasks/images/'
 		},
-		fullscreen:true
+		fullscreen:true,
+		categoriesOnTop: true,
+		leftKey:'r',
+		rightKey:'o'
 	});
 });
