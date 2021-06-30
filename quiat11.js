@@ -462,7 +462,7 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 
 		// are we on the touch version
 		var isTouch = piCurrent.isTouch;
-		console.log(piCurrent.leftKeyText);
+		console.log(piCurrent.leftKeyText, piCurrent.leftKey);
 		var showDebriefing = piCurrent.showDebriefing;
 		var fullscreen = piCurrent.fullscreen;
 		//We use these objects a lot, so let's read them here
