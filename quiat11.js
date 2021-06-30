@@ -163,8 +163,8 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
             leftKey: 'e',
             rightKey: 'i',
 			//Text and style for key instructions displayed about the category labels.
-			leftKeyText : 'Press "'+this.leftKey+'" for', 
-			rightKeyText : 'Press "'+this.rightKey+'" for',
+			leftKeyText : 'Press '+this.leftKey+' for', 
+			rightKeyText : 'Press '+this.rightKey+' for',
 			keysCss : {'font-size':'0.8em', 'font-family':'courier', color:'#000000'},
 			//Text and style for the separator between the top and bottom category labels.
 			orText : 'or', 
@@ -462,6 +462,7 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 
 		// are we on the touch version
 		var isTouch = piCurrent.isTouch;
+		console.log(piCurrent.leftKeyText);
 		var showDebriefing = piCurrent.showDebriefing;
 		var fullscreen = piCurrent.fullscreen;
 		//We use these objects a lot, so let's read them here
@@ -665,7 +666,6 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 			}];
 			return set;
 		}
-
 		var basicTrialSets = {};
 		//Four trials for the attributes.
 		basicTrialSets.att1left =
