@@ -163,8 +163,8 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
             leftKey: 'e',
             rightKey: 'i',
 			//Text and style for key instructions displayed about the category labels.
-			leftKeyText : 'Press "'+leftKey.toUpperCase()+'" for', 
-			rightKeyText : 'Press "'+rightKey.toUpperCase()+'" for',
+			leftKeyText : 'Press "'+this.leftKey.toUpperCase()+'" for', 
+			rightKeyText : 'Press "'+this.rightKey.toUpperCase()+'" for',
 			keysCss : {'font-size':'0.8em', 'font-family':'courier', color:'#000000'},
 			//Text and style for the separator between the top and bottom category labels.
 			orText : 'or', 
