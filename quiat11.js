@@ -767,8 +767,8 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 		function getInstFromTemplate(params)
 		{//params: instTemplate, blockNum, nBlocks, leftCat, rightCat, leftAtt, rightAtt.
 			var retText = params.instTemplate
-				.replace(/leftKey/g, params.leftKey.toUpperCase())
-				.replace(/rightKey/g, params.rightKey.toUpperCase())
+				.replace(/leftKey/g, params.leftKey)
+				.replace(/rightKey/g, params.rightKey)
 				.replace(/leftCategory/g, params.leftCategory)
 				.replace(/rightCategory/g, params.rightCategory)
 				.replace(/leftAttribute/g, params.leftAttribute)
@@ -880,8 +880,8 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 		function getInstTrial(params)
 		{
 			var instParams = {isInst : true};
-			instParams.leftKey = piCurrent.leftKey;
-			instParams.rightKey = piCurrent.rightKey;
+			instParams.leftKey = piCurrent.leftKey.toUpperCase();
+			instParams.rightKey = piCurrent.rightKey.toUpperCase();
 			//The names of the category and attribute labels.
 			if (params.nCats == 2)
 			{//When there are only two categories in the block, one two of these will appear in the instructions.
