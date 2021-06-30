@@ -767,8 +767,8 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 		function getInstFromTemplate(params)
 		{//params: instTemplate, blockNum, nBlocks, leftCat, rightCat, leftAtt, rightAtt.
 			var retText = params.instTemplate
-				.replace(/leftKey/g, params.leftKey)
-				.replace(/rightKey/g, params.rightKey)
+				.replace(/leftKey/g, params.leftKey.toUpperCase())
+				.replace(/rightKey/g, params.rightKey.toUpperCase())
 				.replace(/leftCategory/g, params.leftCategory)
 				.replace(/rightCategory/g, params.rightCategory)
 				.replace(/leftAttribute/g, params.leftAttribute)
