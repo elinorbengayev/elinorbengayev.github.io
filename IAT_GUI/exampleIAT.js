@@ -1,4 +1,4 @@
-define(['pipAPI' ,'https://elinorbengayev.github.io/quiat10.js'], function(APIConstructor, iatExtension) {var API = new APIConstructor(); return iatExtension({
+define(['pipAPI' ,'https://elinorbengayev.github.io/quiat11.js'], function(APIConstructor, iatExtension) {var API = new APIConstructor(); return iatExtension({
     "category1": {
         "name": "Black people!!!",
         "title": {
