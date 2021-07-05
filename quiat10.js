@@ -12,7 +12,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		var API = new APIConstructor();		
 		var scorer = new Scorer();
         var piCurrent = API.getCurrent();
-		console.log("update4");
+		console.log("update5");
 		//Here we set the settings of our task. 
 		//Read the comments to learn what each parameters means.
 		//You can also do that from the outside, with a dedicated jsp file.
@@ -187,8 +187,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b><%=this.leftKey%></b> key for items that belong to the category <font color="#0000ff">leftAttribute.</font>' +
-				'<br/>Put a right finger on the <b><%=this.rightKey%></b> key for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
+				'Put a left finger on the <b><%=current.leftKey%></b> key for items that belong to the category <font color="#0000ff">leftAttribute.</font>' +
+				'<br/>Put a right finger on the <b><%=current.rightKey%></b> key for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
 				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
 				'Press the other key to continue.<br/>' +
 				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
@@ -213,8 +213,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b><%=this.leftKey%></b> key for items that belong to the category <font color="#336600">leftCategory</font>. ' +
-				'<br/>Put a right finger on the <b><%=this.rightKey%></b> key for items that belong to the category <font color="#336600">rightCategory</font>.<br/>' +
+				'Put a left finger on the <b><%=current.leftKey%></b> key for items that belong to the category <font color="#336600">leftCategory</font>. ' +
+				'<br/>Put a right finger on the <b><%=current.rightKey%></b> key for items that belong to the category <font color="#336600">rightCategory</font>.<br/>' +
 				'Items will appear one at a time.<br/><br/>' +
 				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
 				'Press the other key to continue.<br/>' +
@@ -240,8 +240,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Use the <b><%=this.leftKey%></b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
-				'Use the <b><%=this.rightKey%></b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
+				'Use the <b><%=current.leftKey%></b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
+				'Use the <b><%=current.rightKey%></b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
 				'Each item belongs to only one category.<br/><br/>' +
 				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
 				'Press the other key to continue.<br/>' + 
@@ -267,8 +267,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'This is the same as the previous part.<br/>' +
-				'Use the <b><%=this.leftKey%></b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
-				'Use the <b><%=this.rightKey%></b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
+				'Use the <b><%=current.leftKey%></b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
+				'Use the <b><%=current.rightKey%></b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
 				'Each item belongs to only one category.<br/><br/>' +
 				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
 				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
@@ -292,8 +292,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'<b>Watch out, the labels have changed position!</b><br/>' +
-				'Put the left finger on the <b><%=this.leftKey%></b> key for <font color="#336600">leftCategory</font>.<br/>' +
-				'Put the right finger on the <b><%=this.rightKey%></b> key for <font color="#336600">rightCategory</font>.<br/><br/>' +
+				'Put the left finger on the <b><%=current.leftKey%></b> key for <font color="#336600">leftCategory</font>.<br/>' +
+				'Put the right finger on the <b><%=current.rightKey%></b> key for <font color="#336600">rightCategory</font>.<br/><br/>' +
 				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
 				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
 			instSwitchCategoriesTouch: [
