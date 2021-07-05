@@ -491,6 +491,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         });
 
 		// are we on the touch version
+		console.log("text", piCurrent.instAttributePractice);
 		var isTouch = piCurrent.isTouch;
 		var showDebriefing = piCurrent.showDebriefing;
 		var fullscreen = piCurrent.fullscreen;
