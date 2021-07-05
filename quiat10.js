@@ -187,7 +187,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b><%=this..leftKey%></b> key for items that belong to the category <font color="#0000ff">leftAttribute.</font>' +
+				'Put a left finger on the <b><%=this.leftKey%></b> key for items that belong to the category <font color="#0000ff">leftAttribute.</font>' +
 				'<br/>Put a right finger on the <b><%=this.rightKey%></b> key for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
 				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
 				'Press the other key to continue.<br/>' +
