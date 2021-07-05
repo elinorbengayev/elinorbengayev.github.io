@@ -12,7 +12,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		var API = new APIConstructor();		
 		var scorer = new Scorer();
         var piCurrent = API.getCurrent();
-		console.log("update3");
+		console.log("update4");
 		//Here we set the settings of our task. 
 		//Read the comments to learn what each parameters means.
 		//You can also do that from the outside, with a dedicated jsp file.
@@ -163,8 +163,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             		rightKey: 'i',
 			
 			//Text and style for key instructions displayed about the category labels.
-			get leftKeyText(){return 'Press '+this.leftKey+' for';},
-			get rightKeyText(){return 'Press '+this.rightKey+ ' for';},
+			get leftKeyText(){return 'Press '+current.leftKey.toUpperCase()+' for';},
+			get rightKeyText(){return 'Press '+current.rightKey.toUpperCase()+ ' for';},
 			keysCss : {'font-size':'0.8em', 'font-family':'courier', color:'#000000'},
 			//Text and style for the separator between the top and bottom category labels.
 			orText : 'or', 
