@@ -512,24 +512,14 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			cat1.stimulusCss.maxHeight = maxH;
 			cat2.stimulusCss.maxHeight = maxH;
 		}
-		console.log("before FS")
-		enterFullScreen(document.documentElement)
-		console.log("after FS")
-		function enterFullScreen(el){
-			if(fullscreen){
-				//var el = document.documentElement;
-				console.log("FS");
-				console.log("FS", fullscreen);
-				console.log("elem", el);
-				var rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
-				//var rfs = el.mozRequestFullScreen || el.msRequestFullscreen;
-				console.log(rfs);
-				if (rfs) rfs.call(el);
-				else if(window.ActiveXObject){
-			// for Internet Explorer
-				var wscript = new window.ActiveXObject('WScript.Shell');
-				if (wscript!=null) wscript.SendKeys('{F11}');
-				}
+		if(fullscreen){
+			var el = document.documentElement;
+			var rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+			if (rfs) rfs.call(el);
+			else if(window.ActiveXObject){
+		// for Internet Explorer
+			var wscript = new window.ActiveXObject('WScript.Shell');
+			if (wscript!=null) wscript.SendKeys('{F11}');
 			}
 		}
 
