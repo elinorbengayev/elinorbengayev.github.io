@@ -19,6 +19,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		//You can also do that from the outside, with a dedicated jsp file.
 		var iatObj =
 		{
+			console.log("update");
 			fullscreen:false, //Should we show the task in full screen? A Qualtrics-only feature because in the usual Minno, we can go full-screen right at the beginning of the study.
         
 			isTouch:false, //Set whether the task is on a touch device.
