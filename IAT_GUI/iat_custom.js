@@ -42,6 +42,8 @@ define(['pipAPI', 'https://elinorbengayev.github.io/quiat10.js'], function(APICo
 			image : 'https://baranan.github.io/minno-tasks/images/'
 		},
 		leftKey:'r',
-		rightKey:'o'
+		rightKey:'o',
+		shortData: true, 
+		fullscreen: true
 	});
 });
