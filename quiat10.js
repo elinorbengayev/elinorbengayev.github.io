@@ -354,6 +354,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         **** For Qualtrics
         */
         API.addSettings('onEnd', window.minnoJS.onEnd);
+	console.log("here0");
+
 
 		//For debugging the logger
 		//window.minnoJS.logger = console.log;
@@ -372,6 +374,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             // Transform logs into a string
             // we save as CSV because qualtrics limits to 20K characters and this is more efficient.
             serialize: function (name, logs) {
+		console.log("here1");
                 var headers = ['block', 'trial', 'cond', 'comp', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
                 var myLogs = [];
                 var iLog;
@@ -392,6 +395,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     
                 }
                 var content = myLogs.map(function (log) { 
+			console.log("here2");
+			console.log(piCurrent.shortData);
 			if(piCurrent.shortData) log = ShortenData(log);
                     return [
                         log.data.block, //'block'
