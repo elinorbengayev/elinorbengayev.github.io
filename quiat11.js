@@ -164,7 +164,7 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
             rightKey: 'i',
 			//Text and style for key instructions displayed about the category labels.
 			leftKeyText : 'Press "E" for', 
-			rightKeyText : 'Press "I" for',
+			rightKeyText : 'Press "I" for', 
 			keysCss : {'font-size':'0.8em', 'font-family':'courier', color:'#000000'},
 			//Text and style for the separator between the top and bottom category labels.
 			orText : 'or', 
@@ -187,8 +187,8 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b>leftKey</b> key for items that belong to the category <font color="#0000ff">leftAttribute.</font>' +
-				'<br/>Put a right finger on the <b>rightKey</b> key for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
+				'Put a left finger on the <b>E</b> key for items that belong to the category <font color="#0000ff">leftAttribute.</font>' +
+				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
 				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
 				'Press the other key to continue.<br/>' +
 				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
@@ -213,8 +213,8 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b>leftKey</b> key for items that belong to the category <font color="#336600">leftCategory</font>. ' +
-				'<br/>Put a right finger on the <b>rightKey</b> key for items that belong to the category <font color="#336600">rightCategory</font>.<br/>' +
+				'Put a left finger on the <b>E</b> key for items that belong to the category <font color="#336600">leftCategory</font>. ' +
+				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#336600">rightCategory</font>.<br/>' +
 				'Items will appear one at a time.<br/><br/>' +
 				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
 				'Press the other key to continue.<br/>' +
@@ -240,8 +240,8 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Use the <b>leftKey</b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
-				'Use the <b>rightKey</b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
+				'Use the <b>E</b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
+				'Use the <b>I</b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
 				'Each item belongs to only one category.<br/><br/>' +
 				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
 				'Press the other key to continue.<br/>' + 
@@ -267,8 +267,8 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'This is the same as the previous part.<br/>' +
-				'Use the <b>leftKey</b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
-				'Use the <b>rightKey</b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
+				'Use the <b>E</b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
+				'Use the <b>I</b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
 				'Each item belongs to only one category.<br/><br/>' +
 				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
 				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
@@ -292,8 +292,8 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'<b>Watch out, the labels have changed position!</b><br/>' +
-				'Put the left finger on the <b>leftKey</b> key for <font color="#336600">leftCategory</font>.<br/>' +
-				'Put the right finger on the <b>rightKey</b> key for <font color="#336600">rightCategory</font>.<br/><br/>' +
+				'Put the left finger on the <b>E</b> key for <font color="#336600">leftCategory</font>.<br/>' +
+				'Put the right finger on the <b>I</b> key for <font color="#336600">rightCategory</font>.<br/><br/>' +
 				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
 				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
 			instSwitchCategoriesTouch: [
@@ -665,6 +665,7 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 			}];
 			return set;
 		}
+
 		var basicTrialSets = {};
 		//Four trials for the attributes.
 		basicTrialSets.att1left =
@@ -767,8 +768,6 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 		function getInstFromTemplate(params)
 		{//params: instTemplate, blockNum, nBlocks, leftCat, rightCat, leftAtt, rightAtt.
 			var retText = params.instTemplate
-				.replace(/leftKey/g, params.leftKey)
-				.replace(/rightKey/g, params.rightKey)
 				.replace(/leftCategory/g, params.leftCategory)
 				.replace(/rightCategory/g, params.rightCategory)
 				.replace(/leftAttribute/g, params.leftAttribute)
@@ -880,10 +879,6 @@ define(['timeAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _)
 		function getInstTrial(params)
 		{
 			var instParams = {isInst : true};
-			console.log('bef', instParams.leftKey)
-			instParams.leftKey = piCurrent.leftKey.toUpperCase();
-			console.log('after', instParams.leftKey)
-			instParams.rightKey = piCurrent.rightKey.toUpperCase();
 			//The names of the category and attribute labels.
 			if (params.nCats == 2)
 			{//When there are only two categories in the block, one two of these will appear in the instructions.
