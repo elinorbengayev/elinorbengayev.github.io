@@ -2,7 +2,7 @@
 define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) {
 
 	/**
-	Created by: Yoav Bar-Anan (baranan@gmail.com). Modified by Gal
+	Created by: Yoav Bar-Anan (baranan@gmail.com). Modified by Gal and Elinor
 	 * @param  {Object} options Options that replace the defaults...
 	 * @return {Object}         PIP script
 	**/
@@ -12,7 +12,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		var API = new APIConstructor();		
 		var scorer = new Scorer();
         var piCurrent = API.getCurrent();
-		console.log("update7");
+		
+		console.log('update10');
+
 		//Here we set the settings of our task. 
 		//Read the comments to learn what each parameters means.
 		//You can also do that from the outside, with a dedicated jsp file.
@@ -163,8 +165,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             		rightKey: 'i',
 			
 			//Text and style for key instructions displayed about the category labels.
-			leftKeyText: 'Press "E" for',
-			rightKeyText: 'Press "I" for',
+			leftKeyText : 'Press "E" for', 
+			rightKeyText : 'Press "I" for', 
 			keysCss : {'font-size':'0.8em', 'font-family':'courier', color:'#000000'},
 			//Text and style for the separator between the top and bottom category labels.
 			orText : 'or', 
@@ -390,11 +392,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     
                 }
                 var content = myLogs.map(function (log) { 
-			console.log(piCurrent.shortData)
-			if(piCurrent.shortData) {
-				console.log("short data");
-				log = ShortenData(log);
-			}
+			if(piCurrent.shortData) log = ShortenData(log);
                     return [
                         log.data.block, //'block'
                         log.trial_id, //'trial'
@@ -432,6 +430,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                 return toCsv(content);
 		    
 		function ShortenData(log){
+			console.log('shortData');
 			var att1 = piCurrent.attribute1;
 			var att2 = piCurrent.attribute2;
 			var cat1 = piCurrent.category1;
@@ -455,8 +454,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			if (index === 1) log.media[0] = 'a'+'2'+'s'+(indexStimulus+1);
 			if (index === 2) log.media[0] = 'c'+'1'+'s'+(indexStimulus+1);
 			if (index === 3) log.media[0] = 'c'+'2'+'s'+(indexStimulus+1);
-			
-			console.log(log);
 			
 			return log;
 		}
@@ -484,8 +481,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             },
             // Set logs into an input (i.e. put them wherever you want)
             send: function(name, serialized){
-		if (serialized.length > 20000 && piCurrent.alertIfDataMaxedOut === true)
-		    alert('Data are too long for Qualtrics. Consider setting the parameter shortData to true');
+		    // The limit on qualtricks is 20k, we want to be safe
+		if (serialized.length >= 18000){
+			console.warn('Data are too long for Qualtrics. Consider setting the parameter shortData to true');
+		    if(piCurrent.alertIfDataMaxedOut === true)
+			    alert('Data are too long for Qualtrics. Consider setting the parameter shortData to true');
+		}
                 window.minnoJS.logger(serialized);
             }
         });
@@ -514,8 +515,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		}
 		if(fullscreen){
 			var el = document.documentElement;
-// 			var rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
-			var rfs = el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+			var rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
 			if (rfs) rfs.call(el);
 			else if(window.ActiveXObject){
 		// for Internet Explorer
