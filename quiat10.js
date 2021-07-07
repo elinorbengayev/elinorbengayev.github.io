@@ -12,7 +12,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		var API = new APIConstructor();		
 		var scorer = new Scorer();
         var piCurrent = API.getCurrent();
-		console.log("update6");
+		console.log("update7");
 		//Here we set the settings of our task. 
 		//Read the comments to learn what each parameters means.
 		//You can also do that from the outside, with a dedicated jsp file.
@@ -514,7 +514,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		}
 		if(fullscreen){
 			var el = document.documentElement;
-			var rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+// 			var rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+			var rfs = el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
 			if (rfs) rfs.call(el);
 			else if(window.ActiveXObject){
 		// for Internet Explorer
