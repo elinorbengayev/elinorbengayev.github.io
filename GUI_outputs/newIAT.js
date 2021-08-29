@@ -1,9 +1,9 @@
-define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension) {var API = new APIConstructor(); return iatExtension({
+define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat10.js'], function(APIConstructor, iatExtension) {var API = new APIConstructor(); return iatExtension({
     "category1": {
-        "name": "Black!!",
+        "name": "Black people",
         "title": {
             "media": {
-                "word": "Black people"
+                "word": "Black people!"
             },
             "css": {
                 "color": "#336600",
@@ -16,19 +16,10 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
                 "word": "Tayron"
             },
             {
-                "word": "Malik"
-            },
-            {
                 "word": "Terrell"
             },
             {
-                "word": "Jazamin"
-            },
-            {
                 "word": "Tiara"
-            },
-            {
-                "word": "Shanice"
             }
         ],
         "stimulusCss": {
@@ -40,7 +31,7 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
         "name": "White people",
         "title": {
             "media": {
-                "word": "White people"
+                "word": "White people?"
             },
             "css": {
                 "color": "#336600",
@@ -74,13 +65,13 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
         }
     },
     "attribute1": {
-        "name": "Bad!!",
+        "name": "Bad Words",
         "title": {
             "media": {
-                "word": "Bad Words"
+                "word": "Bad Words+"
             },
             "css": {
-                "color": "#336600",
+                "color": "#0000FF",
                 "font-size": "1.8em"
             },
             "height": 4
@@ -90,29 +81,17 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
                 "word": "Awful"
             },
             {
-                "word": "Failure"
-            },
-            {
                 "word": "Agony"
             },
             {
-                "word": "Hurt"
-            },
-            {
                 "word": "Horrible"
-            },
-            {
-                "word": "Terrible"
-            },
-            {
-                "word": "Nasty"
             },
             {
                 "word": "Evil"
             }
         ],
         "stimulusCss": {
-            "color": "#336600",
+            "color": "#0000FF",
             "font-size": "2.3em"
         }
     },
@@ -120,32 +99,17 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
         "name": "Good Words",
         "title": {
             "media": {
-                "word": "Good Words"
+                "word": "Good Words_"
             },
             "css": {
-                "color": "#336600",
+                "color": "#0000FF",
                 "font-size": "1.8em"
             },
             "height": 4
         },
         "stimulusMedia": [
             {
-                "word": "Laughter"
-            },
-            {
-                "word": "Happy"
-            },
-            {
-                "word": "Glorious"
-            },
-            {
-                "word": "Joy"
-            },
-            {
                 "word": "Wonderful"
-            },
-            {
-                "word": "Peace"
             },
             {
                 "word": "Pleasure"
@@ -155,17 +119,19 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
             }
         ],
         "stimulusCss": {
-            "color": "#336600",
+            "color": "#833f11",
             "font-size": "2.3em"
         }
     },
     "base_url": "",
     "remindError": true,
-    "errorCorrection": true,
-    "isTouch": true,
+    "errorCorrection": false,
+    "isTouch": false,
     "isQualtrics": true,
     "showDebriefing": false,
-    "fullscreen": false,
+    "fullscreen": true,
+    "leftKey": "R",
+    "rightKey": "O",
     "blockCategories_nTrials": 20,
     "blockCategories_nMiniBlocks": 5,
     "blockAttributes_nTrials": 20,
@@ -178,14 +144,14 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
     "blockSwitch_nMiniBlocks": 7,
     "randomBlockOrder": true,
     "randomAttSide": false,
-    "textOnError": "<p style=\"font-size:1.4em;font-family:arial serif\">If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Touch the other side to continue.<p/>",
-    "leftKeyText": "Press \"E\" for ",
-    "rightKeyText": "Press \"I\" for",
-    "orKeyText": "or",
-    "AttributesBlockInstructions": "<div><p style=\"font-size:20px; font-family:arial serif;text-align:center;\"><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\"font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\">Put a left finger over the <b>left</b> green area for items that belong to the category <font-color=\"#0000ff\">leftAttribute.</font><br/>Put a right finger over the <b>right</b> green area for items that belong to the category <font-color=\"#0000ff\">rightAttribute</font>.<br/><br/>If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Touch the other side to continue.<br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p style=\"text-align:center;\">Touch the <b>green area</b> when you are ready to start.</font></p></div>",
-    "CategoriesBlockInstructions": "<div><p style=\"font-size:20px; font-family:arial serif;text-align:center;\"><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\"font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\">Put a left finger over the <b>left</b> green area for items that belong to the category <font-color=\"#0000ff\">leftCategory.</font><br/>Put a right finger over the <b>right</b> green area for items that belong to the category <font-color=\"#0000ff\">rightCategory</font>.<br/><br/>If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Touch the other side to continue.<br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p style=\"text-align:center;\">Touch the <b>green area</b> when you are ready to start.</font></p></div>",
-    "FirstCombinedBlockInstructions": "<div><p style=\"font-size:20px; font-family:arial serif;text-align:center;\"><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\"font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\">Put a left finger over the <b>left</b> green area for items that belong to the category <font-color=\"#0000ff\">leftCategory.</font><br/>Put a right finger over the <b>right</b> green area for items that belong to the category <font-color=\"#0000ff\">rightCategory</font>.<br/><br/>If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Touch the other side to continue.<br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p style=\"text-align:center;\">Touch the <b>green area</b> when you are ready to start.</font></p></div>",
-    "SecondCombinedBlockInstructions": "<div><p style=\"font-size:20px; font-family:arial serif;text-align:center;\"><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\"font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\">Put a left finger over the <b>left</b> green area for items that belong to the category <font-color=\"#0000ff\">leftCategory.</font><br/>Put a right finger over the <b>right</b> green area for items that belong to the category <font-color=\"#0000ff\">rightCategory</font>.<br/><br/>If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Touch the other side to continue.<br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p style=\"text-align:center;\">Touch the <b>green area</b> when you are ready to start.</font></p></div>",
-    "SwitchedCategoriesInstructions": "<div><p style=\"font-size:20px; font-family:arial serif;text-align:center;\"><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\"font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\"><br/>Watch out, the labels have changed position!<br/>Put a left finger over the <b>left</b> green area for items that belong to the category <font-color=\"#0000ff\">leftCategory.</font><br/>Put a right finger over the <b>right</b> green area for items that belong to the category <font-color=\"#0000ff\">rightCategory</font>.<br/><br/>If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Touch the other side to continue.<br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p style=\"text-align:center;\">Touch the <b>green area</b> when you are ready to start.</font></p></div>",
-    "PreDebriefingText": "Touch the bottom green area to continue to the next task."
-})});
+    "remindErrorText": "<p style=\"font-size:0.6em;font-family:arial serif;text-align:center;\">If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Press the other key to continue.<p/>",
+    "leftKeyText": "Press \"R\" for ",
+    "rightKeyText": "Press \"O\" for",
+    "orText": "or",
+    "instAttributePractice": "<div><p  style=\"font-size:20px;font-family:arial serif;text-align:center;\"><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\"font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\">Put a left finger on the <b>E</b> key for items that belong to the category <font-color=\"#0000ff\">leftAttribute.</font><br/>Put a right finger on the <b>I</b> key for items that belong to the category <font-color=\"#0000ff\">rightAttribute</font>.<br/><br/>If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Press the other key to continue.<br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p style=\"text-align:center;\">Press the <b>space bar</b> when you are ready to start.</font></p></div>",
+    "instCategoriesPractice": "<div><p style=\"font-size:20px; font-family:arial serif;text-align:center;\"><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\"font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\">Put a left finger on the <b>E</b> key for items that belong to the category <font-color=\"#336600\">leftCategory</font>. <br/>Put a right finger on the <b>I</b> key for items that belong to the category <font-color=\"#336600\">rightCategory</font>.<br/>Items will appear one at a time.<br/><br/>If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Press the other key to continue.<br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p style=\"text-align:center;\">Press the <b>space bar</b> when you are ready to start.</font></p></div>",
+    "instFirstCombined": "<div><p style=\"font-size:20px; font-family:arial serif;text-align:center;\"><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\"font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\">Use the <b>E</b> key for <font-color=\"#336600\">leftCategory</font> and for <font-color=\"#0000ff\">leftAttribute</font>.<br/>Use the <b>I</b> key for <font-color=\"#336600\">rightCategory</font> and for  <font-color=\"#0000ff\">rightAttribute</font>.<br/>Each item belongs to only one category.<br/><br/>If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Press the other key to continue.<br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p style=\"text-align:center;\">Press the <b>space bar</b> when you are ready to start.</font></p></div>",
+    "instSecondCombined": "<div><p style=\"font-size:20px; font-family:arial serif;text-align:center;\"><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\"font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\">This is the same as the previous part.<br/>Use the <b>E</b> key for <font-color=\"#336600\">leftCategory</font> and for <font-color=\"#0000ff\">leftAttribute</font>.<br/>Use the <b>I</b> key for <font-color=\"#336600\">rightCategory</font> and for  <font-color=\"#0000ff\">rightAttribute</font>.<br/>Each item belongs to only one category.<br/><br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p style=\"text-align:center;\">Press the <b>space bar</b> when you are ready to start.</font></p></div>",
+    "instSwitchCategories": "<div><p style=\"font-size:20px; font-family:arial serif;text-align:center;\"><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/><br/></p><p style=\"font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial\"><b>Watch out, the labels have changed position!</b><br/>Put the left finger on the <b>E</b> key for <font-color=\"#336600\">leftCategory</font>.<br/>Put the right finger on the <b>I</b> key for <font-color=\"#336600\">rightCategory</font>.<br/><br/><u>Go as fast as you can</u> while being accurate.<br/><br/></p><p style=\"text-align:center;\">Press the <b>space bar</b> when you are ready to start.</font></p></div>",
+    "preDebriefingText": "Press space to continue to your feedback "
+});});
