@@ -175,7 +175,7 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
     "blockFirstCombined_nTrials": 4,
     "blockFirstCombined_nMiniBlocks": 5,
     "blockSecondCombined_nTrials": 0,
-    "blockSecondCombined_nMiniBlocks": 0,
+    "blockSecondCombined_nMiniBlocks": 5,
     "blockSwitch_nTrials": 4,
     "blockSwitch_nMiniBlocks": 5,
     "randomBlockOrder": true,
