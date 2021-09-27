@@ -3,7 +3,7 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
         "name": "Black people!",
         "title": {
             "media": {
-                "word": "Black people"
+                "word": "Black people!"
             },
             "css": {
                 "color": "#336600",
