@@ -1,6 +1,6 @@
 define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat10.js'], function(APIConstructor, iatExtension) {var API = new APIConstructor(); return iatExtension({
     "category1": {
-        "name": "Black people",
+        "name": "Black people!",
         "title": {
             "media": {
                 "word": "Black people"
