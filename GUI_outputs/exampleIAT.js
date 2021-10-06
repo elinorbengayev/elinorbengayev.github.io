@@ -172,7 +172,7 @@ define(['pipAPI' ,'https://elinorbengayev.github.io/testing_studies_scripts/quia
     blockAttributes_nMiniBlocks : 5,
     blockCategories_nTrials : 20,
     blockCategories_nMiniBlocks : 5,
-    blockFirstCombined_nTrials : 40,
+    blockFirstCombined_nTrials : 20,
     blockFirstCombined_nMiniBlocks : 5,
     blockSecondCombined_nTrials : 0, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
     blockSecondCombined_nMiniBlocks : 10,
