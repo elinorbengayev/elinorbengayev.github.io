@@ -3,7 +3,7 @@ define(['pipAPI' ,'https://elinorbengayev.github.io/testing_studies_scripts/quia
         "name": "Black people!",
         "title": {
             "media": {
-                "word": "Black people!!"
+                "word": "Black people"
             },
             "css": {
                 "color": "#336600",
@@ -168,16 +168,16 @@ define(['pipAPI' ,'https://elinorbengayev.github.io/testing_studies_scripts/quia
     "fullscreen": false,
     "leftKey": "E",
     "rightKey": "I",
-    blockAttributes_nTrials : 4,
-    blockAttributes_nMiniBlocks : 5,
-    blockCategories_nTrials : 4,
-    blockCategories_nMiniBlocks : 5,
-    blockFirstCombined_nTrials : 4,
-    blockFirstCombined_nMiniBlocks : 5,
-    blockSecondCombined_nTrials : 4, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
-    blockSecondCombined_nMiniBlocks : 5,
-    blockSwitch_nTrials : 4,
-    blockSwitch_nMiniBlocks : 5,
+//     blockAttributes_nTrials : 20,
+//     blockAttributes_nMiniBlocks : 5,
+//     blockCategories_nTrials : 4,
+//     blockCategories_nMiniBlocks : 5,
+//     blockFirstCombined_nTrials : 4,
+//     blockFirstCombined_nMiniBlocks : 5,
+//     blockSecondCombined_nTrials : 4, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
+//     blockSecondCombined_nMiniBlocks : 5,
+//     blockSwitch_nTrials : 4,
+//     blockSwitch_nMiniBlocks : 5,
     "randomBlockOrder": true,
     "randomAttSide": false,
     "remindErrorText": "<p style=\"font-size:0.6em;font-family:arial serif;text-align:center;\">If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Press the other key to continue.<p/>",
