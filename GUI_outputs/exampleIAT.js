@@ -1,4 +1,4 @@
-define(['pipAPI' ,'https://elinorbengayev.github.io/testing_studies_scripts/quiat10.js'], function(APIConstructor, iatExtension) {var API = new APIConstructor(); return iatExtension({
+define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat10.js'], function(APIConstructor, iatExtension) {var API = new APIConstructor(); return iatExtension({
     "category1": {
         "name": "Black people!",
         "title": {
@@ -168,16 +168,16 @@ define(['pipAPI' ,'https://elinorbengayev.github.io/testing_studies_scripts/quia
     "fullscreen": false,
     "leftKey": "E",
     "rightKey": "I",
-//     blockAttributes_nTrials : 20,
-//     blockAttributes_nMiniBlocks : 5,
-//     blockCategories_nTrials : 4,
-//     blockCategories_nMiniBlocks : 5,
-//     blockFirstCombined_nTrials : 4,
-//     blockFirstCombined_nMiniBlocks : 5,
-//     blockSecondCombined_nTrials : 4, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
-//     blockSecondCombined_nMiniBlocks : 5,
-//     blockSwitch_nTrials : 4,
-//     blockSwitch_nMiniBlocks : 5,
+    blockAttributes_nTrials : 20,
+    blockAttributes_nMiniBlocks : 5,
+    blockCategories_nTrials : 20,
+    blockCategories_nMiniBlocks : 5,
+    blockFirstCombined_nTrials : 20,
+    blockFirstCombined_nMiniBlocks : 5,
+    blockSecondCombined_nTrials : 0, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
+    blockSecondCombined_nMiniBlocks : 10,
+    blockSwitch_nTrials : 28,
+    blockSwitch_nMiniBlocks : 7,
     "randomBlockOrder": true,
     "randomAttSide": false,
     "remindErrorText": "<p style=\"font-size:0.6em;font-family:arial serif;text-align:center;\">If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Press the other key to continue.<p/>",
