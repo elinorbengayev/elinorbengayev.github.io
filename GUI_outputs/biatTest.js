@@ -1,9 +1,10 @@
-define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat6.js'], function(APIConstructor, iatExtension) {var API = new APIConstructor(); return iatExtension({
+define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat6.js'], function(APIConstructor, iatExtension){
+	var API = new APIConstructor(); return iatExtension({
     "practiceCategory1": {
         "name": "Mammals",
         "title": {
             "media": {
-                "word": "Mammals"
+                "word": "Mammals!!!"
             },
             "css": {
                 "color": "#31b404",
@@ -12,7 +13,7 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
             "height": 4,
             "startStimulus": {
                 "media": {
-                    "word": "Dogs, Lions"
+                    "word": "Dogs, Horses, Cows, Lions"
                 },
                 "css": {
                     "color": "#31b404",
@@ -24,6 +25,9 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
         "stimulusMedia": [
             {
                 "word": "Dogs"
+            },
+            {
+                "word": "Horses"
             },
             {
                 "word": "Lions"
@@ -38,10 +42,10 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
         }
     },
     "practiceCategory2": {
-        "name": "Birds!!!!",
+        "name": "Birds",
         "title": {
             "media": {
-                "word": "Birds!!!!"
+                "word": "Birds"
             },
             "css": {
                 "color": "#31b404",
@@ -80,10 +84,10 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
     },
     "categories": [
         {
-            "name": "Black peoplefwfew",
+            "name": "Black people",
             "title": {
                 "media": {
-                    "word": "Black peoplefewfewfw"
+                    "word": "Black people"
                 },
                 "css": {
                     "color": "#31b404",
@@ -127,19 +131,19 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
             }
         },
         {
-            "name": "White",
+            "name": "White people",
             "title": {
                 "media": {
-                    "word": "White"
+                    "word": "White people"
                 },
                 "css": {
-                    "color": "#f36012",
+                    "color": "#31b404",
                     "font-size": "1.8em"
                 },
                 "height": 4,
                 "startStimulus": {
                     "media": {
-                        "word": "Jake, Connor, Alison, Emily"
+                        "word": "Jake, Connor, Bradley, Alison, Emma, Emily"
                     },
                     "css": {
                         "color": "#31b404",
@@ -150,6 +154,21 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
             },
             "stimulusMedia": [
                 {
+                    "word": "Jake"
+                },
+                {
+                    "word": "Connor"
+                },
+                {
+                    "word": "Bradley"
+                },
+                {
+                    "word": "Allison"
+                },
+                {
+                    "word": "Emma"
+                },
+                {
                     "word": "Emily"
                 }
             ],
@@ -157,45 +176,13 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
                 "color": "#31b404",
                 "font-size": "2em"
             }
-        },
-        {
-            "name": "rfrfewf",
-            "title": {
-                "media": {
-                    "word": "rwere"
-                },
-                "css": {
-                    "color": "#000000",
-                    "font-size": "0em"
-                },
-                "height": 4,
-                "startStimulus": {
-                    "media": {
-                        "word": "rwerwe"
-                    },
-                    "css": {
-                        "color": "#000000",
-                        "font-size": "0em"
-                    },
-                    "height": 2
-                }
-            },
-            "stimulusMedia": [
-                {
-                    "word": "rwer"
-                }
-            ],
-            "stimulusCss": {
-                "color": "#000000",
-                "font-size": "0em"
-            }
         }
     ],
     "attribute1": {
-        "name": "Pleasantefewf",
+        "name": "Pleasant",
         "title": {
             "media": {
-                "word": "Pleasantfewfwf"
+                "word": "Pleasant"
             },
             "css": {
                 "color": "#0000FF",
@@ -213,17 +200,30 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
                 "height": 2
             }
         },
-        "stimulusMedia": [],
+        "stimulusMedia": [
+            {
+                "word": "Joy"
+            },
+            {
+                "word": "Love"
+            },
+            {
+                "word": "Happy"
+            },
+            {
+                "word": "Good"
+            }
+        ],
         "stimulusCss": {
             "color": "#0000FF",
             "font-size": "2em"
         }
     },
     "attribute2": {
-        "name": "Unpleasantdfewf",
+        "name": "Unpleasant",
         "title": {
             "media": {
-                "word": "Unpleasantfwef"
+                "word": "Unpleasant"
             },
             "css": {
                 "color": "#0000FF",
@@ -243,6 +243,9 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
         },
         "stimulusMedia": [
             {
+                "word": "Horrible"
+            },
+            {
                 "word": "Nasty"
             },
             {
@@ -257,8 +260,10 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
             "font-size": "2em"
         }
     },
-    "base_url": "",
-    "remindError": false,
+    "base_url": {
+        "image": "https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/docs/images/"
+    },
+    "remindError": true,
     "showStimuliWithInst": true,
     "isTouch": true,
     "practiceBlock": true,
@@ -267,13 +272,12 @@ define(['pipAPI' ,'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
     "nTrialsPerMiniBlock": 16,
     "nPracticeBlockTrials": 8,
     "nCategoryAttributeBlocks": 4,
-    "focalAttribute": "attribute2",
-    "firstFocalAttribute": "attribute2",
-    "focalCategoryOrder": "bySequence",
-    "rightKeyText": "vsdvsdvsd",
-    "leftKeyText": "svdsvsdvs",
-    "orKeyText": "vdsvsvssvsds",
-    "remindErrorText": "<p style=\"font-size:1.4em; font-family:arial sans-serif; text-align:center;\">If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Touch the other side to continue.<p/>",
-    "finalText": "Touch the bottom green area to continue to the next task",
-    "instTemplate": "<div><p style=\"text-align:center;\"\" <br/><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/></p><p style=\"text-align:left;\" style=\"margin-left:5px\"> Put a right finger on the <b>right</b> green area for items that belong to the category <font-color=\"#0000FF\">focalAtt</font>, and for items that belong to the category <font-color=\"#31b404\">focalCat</font>.<br/>Put a left finger on the <b>left</b> green area for items that do not belong to these categories.<br/>If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Press the other key to continue.<br/><p style=\"text-align:center;\">Touch the <b>lower </b> green area to start.</font></p></div>"
+    "focalAttribute": "attribute1",
+    "firstFocalAttribute": "random",
+    "focalCategoryOrder": "random",
+    "rightKeyTextTouch": "Left for all else",
+    "leftKeyTextTouch": "Right if item belongs",
+    "remindErrorTextTouch": "<p style=\"font-size:1.4em; font-family:arial sans-serif; text-align:center;\">If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Touch the other side to continue.<p/>",
+    "finalTouchText": "Touch the bottom green area to continue to the next task",
+    "instTemplateTouch": "<div><p style=\"text-align:center;\"\" <br/><font-color=\"#000000\"><u>Part blockNum of nBlocks </u><br/></p><p style=\"text-align:left;\" style=\"margin-left:5px\"> Put a right finger on the <b>right</b> green area for items that belong to the category <font-color=\"#0000FF\">focalAtt</font>, and for items that belong to the category <font-color=\"#31b404\">focalCat</font>.<br/>Put a left finger on the <b>left</b> green area for items that do not belong to these categories.<br/>If you make a mistake, a red <font-color=\"#ff0000\"><b>X</b></font> will appear. Press the other key to continue.<br/><p style=\"text-align:center;\">Touch the <b>lower </b> green area to start.</font></p></div>"
 });});
