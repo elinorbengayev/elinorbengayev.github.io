@@ -1,0 +1,25 @@
+img{
+    width:320px;
+    height:320px;
+    padding-top: 2em;
+    padding-right: 0.5em;
+
+}
+img:hover{
+    cursor: pointer;
+}
+.container{
+    padding-top: 1em; 
+}
+/* .btn-group{
+    display:flex; 
+    justify-content:center;
+} */
+.btn-right{
+    width:200px;
+    display:inline-block;
+    overflow: auto;
+    white-space: nowrap;
+    margin:0px auto;
+    border:1px red solid;
+}

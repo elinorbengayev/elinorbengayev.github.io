@@ -1,0 +1,45 @@
+<!doctype html>
+<head>
+    <title>Apptimus Task</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onload="onLoad()">
+    <div class="container">
+        <div class="row">
+        <h3>Add banners</h1></div>
+        <div class="form-group row">
+            <label>Banner IMG URL</label>
+            <input id='bannerImg' class="form-control" type="url" placeholder="https://img_example.com" required>
+        </div>
+        <div class="form-group row">
+            <label>Redirect Link</label>
+            <input id='redirectLink' class="form-control" type="url" placeholder="https://link_example.com" required>
+        </div>
+        <div class="row">
+            <div class="col-auto mr-auto">
+                <div class="btn-group" role="group">
+                <!-- <button type="submit" class="btn btn-primary"
+                    title = 'Add picture to the page'
+                    onclick="createNewBanner('banners-list', document.getElementById('redirectLink').value, document.getElementById('bannerImg').value)">
+                    Submit
+                </button> -->
+                    <button class="btn btn-primary" type="submit"
+                        title = 'Add banner to the page'
+                        onclick="createNewBanner('banners-list', document.getElementById('redirectLink').value, document.getElementById('bannerImg').value)">
+                    Submit</button>
+                    <button type="submit" class="btn btn-success" title='Save banners list' onclick="handleSave()">Save</button>
+                </div>
+            </div>
+            <div class="col-auto">
+                <button type="reset" class="btn btn-danger" title='Delete all banners' onclick="handleClear()">Clear</button>
+            </div>
+        </div>
+        <div id='banners-list'></div>
+    </div>
+</body>
+<script src="./bannersJS.js">
+</script>
+
+</html>
