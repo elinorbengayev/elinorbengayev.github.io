@@ -1,26 +1,18 @@
-# Implicit Measures Wizard Documentation
+# Implicit Measures Wizard For Dashboard Documentation
 #### Written by Elinor Bengayev, elinorb240@gmail.com
 
-This file presents minimal documentation for the Implicit Measures Wizard within the Dashboard and of the Stand Alone (SA) version. Only the major parts of the wizard are covered, because the rest seem to be straightforward and intuitive, but don't hesitate to contact me for additional support.   
+This file presents minimal documentation for the Implicit Measures Wizard as a feature in the Dashboard. You can find the documentation for the Stand Alone version [here](). Only the major parts of the wizard are covered, because the rest seem to be straightforward and intuitive, but don't hesitate to contact me for additional support.   
 
 *(General Note: I created this project as a junior developer, and it was my first big programming project, so you may notice some design problems or actions that could be done more efficiently.)*
 
 First and foremost, to get started working on the project, please install the minno-server following [this guide](https://docs.google.com/document/d/1ZbobgBbhOvoREsod0ms4BYWDsafiIQozZJBDmKfptYI). 
 It will get you all the dahboard code, both server and client sides, but you will only need the client side (dashboard directory) and specific part of it. 
 
-There are two versions for this GUI: a [stand-alone version](https://minnojs.github.io/minno-server/implicitMeasures/) and as a feature in the Dashboard (currently only on the Open Dashboard of the TAU server, and the project implicit's Dashboard).
-
 For running the dashboard in the working environment, enter this command:
 ```
 npm run watch
 ```
-This command won't update the changes made in the stand-alone files, only the Dashboard ones. For updating the SA files, enter this command:
-```
-npm run watch-implicit
-```
-(Those commands and their functionality are defined in `package.json`.) 
-#### I will address the two versions separately:
-### Dashboard version:
+
 The Implicit Measures Wizards folder is located in `minno-server/dashboard/src/study/files/wizards/implicitMeasures`. In this folder, there is a different folder for each task, and an additional folder called `resources`, which holds components that are used by multiple tasks wizards.
 The style settings (i.e the css file) are defined in the global `minno-server/dashboard/src/style/style.scss` file (which bundled to a css file - `minno-server/dashboard/dist/style.css`).
 
@@ -84,20 +76,3 @@ The style settings (i.e the css file) are defined in the global `minno-server/da
 
 #### iatImportComponent.js `(minno-server/dashboard/src/study/files/wizards/implicitMeasures/IAT/iatImportComponent.js)`
 > converts the JSON file to an object.  Here, like the output component in some wizards, the function updateMediaSettings() changes the attributes names that will be suitable to the gui fields names (as described before). 
-
-### Stand-Alone (SA) Version:
-The SA version is powered by `GitHub pages`. For this purpose, the in the repository settings the `pages` option must be enabled. In addition, the source of the publication needs to be the `docs` directory in the master branch. That’s the reason the SA is located in `docs/implicitMeasures`. 
-
-> #### index.html `(minno-server/docs/implicitMeasures/index.html)`
-> This is the main page that displays all the wizards. By clicking on a wizard button, the page referenced to `implicit.html` with the wizard's type. 
-> #### implicit.html `(minno-server/docs/implicitMeasures/view/implicit.html)`
-> Here, the file loads the page script by its type (given in the URL - i.e `href="view/implicit.html?type=iat"`). 
-> The script loaded is `../jsFiles/type_index.js (i.e iat_index.js)`.
-> #### iat_index.js `(minno-server/docs/implicitMeasures/jsFiles/iat_index.js)`
-> Created with [rollup](https://rollupjs.org/guide/en/). Simply, it bundles all the components into one big .js file. The setting for the rollup is in `rollup.config-implicit.js`. This rollup is calling `iat.index.standalone.js` which calls the `iat.js` with the `external = True`, that indicates that we are calling the wizard for SA purposes. 
-> #### style.css `(minno-server/docs/implicitMeasures/view/style.css)`
-> Also rolled up, from `dashboard/src/style/style.scss`.
-
-
-
-
