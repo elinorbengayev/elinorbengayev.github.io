@@ -1,4 +1,4 @@
-# Implicit Measures Wizard For Dashboard Documentation
+# Implicit Measures Wizard for Dashboard Documentation
 #### Written by Elinor Bengayev, elinorb240@gmail.com
 
 This file presents minimal documentation for the Implicit Measures Wizard as a feature in the Dashboard. You can find the documentation for the Stand Alone version [here](https://minnojs.github.io/minno-server/implicitMeasures/implicit_measures_SA_doc.md).
