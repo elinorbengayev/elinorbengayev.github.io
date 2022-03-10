@@ -7,7 +7,7 @@ Only the major parts of the wizard are covered, the rest seems to be straightfor
 First and foremost, to get started working on the project, please install the minno-server following [this guide](https://docs.google.com/document/d/1ZbobgBbhOvoREsod0ms4BYWDsafiIQozZJBDmKfptYI). 
 It will get you all the Dahboard files, both server and client sides, but you will only need the client side ('dashboard' directory) and a specific part of it. 
 
-For running the dashboard in the working environment, enter this command:
+To run the dashboard in the working environment and to update changes, enter this command:
 ```
 npm run watch
 ```
