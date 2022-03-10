@@ -2,7 +2,7 @@
 #### Written by Elinor Bengayev, elinorb240@gmail.com
 
 This file presents minimal documentation for the Implicit Measures Wizard as the Stand Alone (SA) version. 
-It's recommended to view [the documentation of the Dashboard version]() first, it covers the core componentes of the wizards. The current documentation covers only the SA specific files. 
+It's recommended to view [the documentation of the Dashboard version](https://github.com/minnojs/minno-server/blob/master/dashboard/src/study/files/wizards/implicitMeasures/EP/ep.js) first, it covers the core componentes of the wizards. The current documentation covers only the SA specific files. 
 
 To run the project in the working environment and to update changes, enter this command:
 
