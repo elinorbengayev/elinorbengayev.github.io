@@ -16,6 +16,6 @@
   "license": "Apache-2.0",
   "dependencies": {
     "mithril": "^2.0.4",
-    "rollup": "^2.33.1"
+    "rollup": "^3.29.5"
   }
 }
